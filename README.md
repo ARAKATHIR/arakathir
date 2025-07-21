@@ -22,7 +22,7 @@ It provides information about our mission, program structure, volunteer opportun
 
 ## 🚀 How to Use
 
-🔗 **Live Site**: [https://yourusername.github.io/arakathir](https://yourusername.github.io/arakathir)  
+🔗 **Live Site**: [https://arakathir.github.io/arakathir](https://arakathir.github.io/arakathir)  
 *(Replace with actual GitHub Pages URL after publishing)*
 
 ---
