@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://arakathir.github.io/arakathir/sitemap.xml
