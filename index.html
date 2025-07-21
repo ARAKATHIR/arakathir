@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Arakathir – Human Excellence Program for College Students</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <meta name="description" content="Arakathir is a human excellence program for college students across Tamil Nadu, focusing on values, wellness, purpose, and leadership.">
+    <meta name="keywords" content="Arakathir, Human Excellence, College Training, Student Development, Tamil Nadu, Values, Youth Program, Thirukkural, Personality Development">
+    <meta name="author" content="Arakathir Team">
+
+    <!-- ✅ Social Sharing (Optional, improves appearance when shared) -->
+    <meta property="og:title" content="Arakathir – Human Excellence Program for College Students" />
+    <meta property="og:description" content="Transforming youth through monthly workshops and value-driven guidance. Join Arakathir – the movement for a better society." />
+    <meta property="og:image" content="arakathir-logo.png" />
+    <meta property="og:url" content="https://www.arakathir.in" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/png" href="arakathir-logo.png" />
+
+    <!-- ✅ Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+
+
+  <body class="bg-white text-gray-800 pt-28">
+
+
+    <!-- Header -->
+<!-- Fixed Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+  <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+    <!-- Logo + Brand -->
+    <div class="flex items-center space-x-3">
+      <img src="arakathir-logo.png" alt="Arakathir Logo" class="h-12 w-auto rounded-full border border-gray-300" />
+      <h1 class="text-2xl font-bold">Arakathir</h1>
+    </div>
+
+    <!-- Hamburger for Mobile -->
+    <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Nav links (desktop only) -->
+    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="index.html" class="text-blue-600">Home</a>
+      <a href="about.html" class="hover:text-blue-600">About</a>
+      <a href="program.html" class="hover:text-blue-600">Program</a>
+      <a href="join.html" class="hover:text-blue-600">Join</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu (below header) -->
+  <div id="mobileMenu" class="md:hidden hidden flex-col space-y-2 px-4 pb-4 text-sm font-medium">
+    <a href="index.html" class="text-blue-600">Home</a>
+    <a href="about.html" class="hover:text-blue-600">About</a>
+    <a href="program.html" class="hover:text-blue-600">Program</a>
+    <a href="join.html" class="hover:text-blue-600">Join</a>
+  </div>
+</header>
+
+
+
+<!-- JavaScript for toggle -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+    <!-- Hero Section -->
+    <section class="relative bg-gray-100 text-center py-16 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-extrabold mb-4 text-blue-800">Guiding Youth Towards Human Excellence</h2>
+        <p class="text-lg mb-6 text-gray-600">A transformative 10-month journey for college students across Tamil Nadu, combining values, purpose, and action.</p>
+        <a href="join.html" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition">Join the Movement</a>
+      </div>
+    </section>
+
+    <!-- Image & Tagline Section -->
+    <section class="py-10 px-6 bg-white text-center">
+      <img src="https://plus.unsplash.com/premium_photo-1691699251514-a3a2ece083af?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGNvbGxlZ2UlMjBhbmQlMjBzdHVkZW50c3xlbnwwfHwwfHx8MA%3D%3D" alt="Students" class="rounded-xl mx-auto mb-6 shadow" />
+      <h3 class="text-2xl font-semibold text-gray-700">Lighting the Path for a Better Society</h3>
+    </section>
+
+    <!-- Program Highlights -->
+    <section class="bg-gray-50 py-14 px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+        <div>
+          <h4 class="text-xl font-bold text-blue-700 mb-2">Monthly Sessions</h4>
+          <p>Full-day immersive workshops at your college every month.</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold text-blue-700 mb-2">Topics That Matter</h4>
+          <p>Values, wellness, Thirukkural, purpose, environment & more.</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold text-blue-700 mb-2">Real Impact</h4>
+          <p>Certified learning, student ambassador roles & future-ready habits.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-blue-700 text-white py-12 text-center">
+      <h2 class="text-3xl font-bold mb-4">Be Part of the Light</h2>
+      <p class="mb-6">Let’s build a new generation of socially conscious, strong, and purposeful youth.</p>
+      <a href="join.html" class="bg-white text-blue-700 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">Get Involved</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4 text-sm">
+      &copy; 2025 Arakathir. All rights reserved.
+    </footer>
+  </body>
+</html>

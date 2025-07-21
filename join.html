@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Join Us – Volunteer or Invite Arakathir</title>
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Join Arakathir as a volunteer or invite us to your college. Collaborate to create human excellence among youth in Tamil Nadu.">
+  <meta name="keywords" content="Join Arakathir, Arakathir Volunteer, Invite to College, Tamil Nadu Student Program, Human Excellence, College Development">
+  <meta name="author" content="Arakathir Team">
+
+  <!-- ✅ Open Graph for Social Sharing -->
+  <meta property="og:title" content="Join Arakathir – Be Part of the Light" />
+  <meta property="og:description" content="Volunteer with Arakathir or bring our Human Excellence Program to your college. Help us transform young lives." />
+  <meta property="og:image" content="arakathir-logo.png" />
+  <meta property="og:url" content="https://www.arakathir.in/join.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="arakathir-logo.png" />
+
+  <!-- ✅ Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-800 pt-28">
+
+
+    <!-- Header -->
+<!-- Fixed Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+  <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+    <!-- Logo + Brand -->
+    <div class="flex items-center space-x-3">
+      <img src="arakathir-logo.png" alt="Arakathir Logo" class="h-12 w-auto rounded-full border border-gray-300" />
+      <h1 class="text-2xl font-bold">Arakathir</h1>
+    </div>
+
+    <!-- Hamburger for Mobile -->
+    <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Nav links (desktop only) -->
+    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-blue-600">Home</a>
+      <a href="about.html" class="hover:text-blue-600">About</a>
+      <a href="program.html" class="hover:text-blue-600">Program</a>
+      <a href="join.html" class="text-blue-600">Join</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu (below header) -->
+  <div id="mobileMenu" class="md:hidden hidden flex-col space-y-2 px-4 pb-4 text-sm font-medium">
+    <a href="index.html" class="hover:text-blue-600">Home</a>
+    <a href="about.html" class="hover:text-blue-600">About</a>
+    <a href="program.html" class="hover:text-blue-600">Program</a>
+    <a href="join.html" class="text-blue-600">Join</a>
+  </div>
+</header>
+
+
+
+<!-- JavaScript for toggle -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto p-6 grid lg:grid-cols-2 gap-8 items-center mt-10">
+
+    <!-- Left Side - Intro Text -->
+    <div>
+      <h2 class="text-4xl font-bold mb-4 text-orange-700">Be Part of the Light!</h2>
+      <p class="text-lg mb-4">
+        Are you passionate about human excellence, student development, and creating impact in colleges across Tamil Nadu? Join <strong>Arakathir</strong> as a volunteer or invite us to your institution.
+      </p>
+      <p class="text-gray-600">We’re excited to collaborate with individuals and institutions that resonate with our values.</p>
+    </div>
+
+    <!-- Right Side - Join Form -->
+    <form action="https://formsubmit.co/0f048c49c7704cc7e4ab8041aa9fc777" method="POST" class="bg-white p-8 rounded-xl shadow space-y-6">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      
+      <div>
+        <label class="block text-sm font-semibold mb-1 text-gray-700">Your Name</label>
+        <input type="text" name="name" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Full Name" />
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-1 text-gray-700">Email Address</label>
+        <input type="email" name="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="you@example.com" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1 text-gray-700">Message / Purpose</label>
+        <textarea name="message" rows="4" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Tell us why you're interested, your college name, or any questions you have."></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition duration-200">
+        Send Message
+      </button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-16 text-center text-sm text-gray-500 p-4 border-t bg-white">
+    © 2025 Arakathir. All rights reserved.
+  </footer>
+</body>
+</html>

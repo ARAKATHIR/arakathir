@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Arakathir – Monthly Human Excellence Programs for Students</title>
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Explore Arakathir’s monthly sessions focused on human excellence, meditation, ethics, values, and clarity for Tamil Nadu college students.">
+  <meta name="keywords" content="Arakathir Program, Monthly Workshops, Student Development, Human Values, Meditation, Ethics, Tamil Nadu Colleges">
+  <meta name="author" content="Arakathir Team">
+
+  <!-- ✅ Social Preview -->
+  <meta property="og:title" content="Arakathir Monthly Human Excellence Program" />
+  <meta property="og:description" content="We guide students through themed sessions on discipline, purpose, wellness, and ethics across 10 months." />
+  <meta property="og:image" content="arakathir-logo.png" />
+  <meta property="og:url" content="https://www.arakathir.in/program.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="arakathir-logo.png" />
+
+  <!-- ✅ Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- ✅ Optional: JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/tabletop@1.6.0/tabletop.js"></script>
+</head>
+
+<body class="bg-white text-gray-800 pt-28">
+
+
+    <!-- Header -->
+<!-- Fixed Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+  <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+    <!-- Logo + Brand -->
+    <div class="flex items-center space-x-3">
+      <img src="arakathir-logo.png" alt="Arakathir Logo" class="h-12 w-auto rounded-full border border-gray-300" />
+      <h1 class="text-2xl font-bold">Arakathir</h1>
+    </div>
+
+    <!-- Hamburger for Mobile -->
+    <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Nav links (desktop only) -->
+    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-blue-600">Home</a>
+      <a href="about.html" class="hover:text-blue-600">About</a>
+      <a href="program.html" class="text-blue-600">Program</a>
+      <a href="join.html" class="hover:text-blue-600">Join</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu (below header) -->
+  <div id="mobileMenu" class="md:hidden hidden flex-col space-y-2 px-4 pb-4 text-sm font-medium">
+    <a href="index.html" class="hover:text-blue-600">Home</a>
+    <a href="about.html" class="hover:text-blue-600">About</a>
+    <a href="program.html" class="text-blue-600">Program</a>
+    <a href="join.html" class="hover:text-blue-600">Join</a>
+  </div>
+</header>
+
+
+
+<!-- JavaScript for toggle -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+  <!-- Hero -->
+  <section class="text-center py-16 px-4 bg-gradient-to-r from-blue-50 to-white">
+    <h1 class="text-4xl font-bold mb-4">Explore Our Human Excellence Programs</h1>
+    <p class="text-lg text-gray-700">Empowering college students through values, meditation, and modern ethics for a better society.</p>
+  </section>
+
+  <!-- Program Content -->
+  <section class="py-12 px-6 max-w-6xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-6 text-center">Our Monthly Sessions</h2>
+    <div id="program-table" class="grid gap-4"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t text-center py-6 mt-12 text-sm text-gray-600">
+    &copy; 2025 Arakathir. All rights reserved.
+  </footer>
+
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('program-table');
+    const sheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTm0WutrkTYatWlqsTUjenLuG29VidoVtsEULr-ye92E83p-9yilpX961QFsrwyzlfzJx4WNJbCRSvW/pub?output=csv';
+
+    // Show loading state
+    container.innerHTML = '<div class="text-center py-8">Loading program data...</div>';
+
+    fetch(sheetURL)
+      .then(response => response.text())
+      .then(csvData => {
+        const rows = csvData.split('\n').slice(1); // Skip header row
+        container.innerHTML = ''; // Clear loading message
+
+        rows.forEach(row => {
+          const [Month, Theme, Topics, Activities, Duration] = row.split(',');
+          const card = document.createElement('div');
+          card.className = 'bg-white p-6 rounded-xl shadow';
+          card.innerHTML = `
+            <h3 class="text-xl font-bold text-blue-600 mb-2">${Month || 'N/A'}</h3>
+            <p><strong>Theme:</strong> ${Theme || 'N/A'}</p>
+            <p><strong>Topics:</strong> ${Topics || 'N/A'}</p>
+            <p><strong>Activities:</strong> ${Activities || 'N/A'}</p>
+            <p><strong>Duration:</strong> ${Duration || 'N/A'}</p>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(error => {
+        container.innerHTML = '<div class="text-center py-8 text-red-500">Failed to load data. Please try again later.</div>';
+        console.error('Error fetching CSV:', error);
+      });
+  });
+</script>
+</body>
+</html>
