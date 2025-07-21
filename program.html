@@ -27,19 +27,52 @@
 <body class="bg-white text-gray-900">
 
   <!-- ✅ Navigation -->
-  <header class="bg-gray-100 p-4 shadow-md">
-    <div class="container mx-auto flex justify-between items-center">
-      <span class="text-2xl font-bold">Arakathir</span>
-      <nav>
-        <ul class="flex space-x-6">
-          <li><a href="index.html" class="hover:underline">Home</a></li>
-          <li><a href="about.html" class="hover:underline">About</a></li>
-          <li><a href="program.html" class="font-semibold underline">Program</a></li>
-          <li><a href="join.html" class="hover:underline">Join Us</a></li>
-        </ul>
-      </nav>
+  <!-- Fixed Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+  <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+    <!-- Logo + Brand -->
+    <div class="flex items-center space-x-3">
+      <img src="arakathir-logo.png" alt="Arakathir Logo" class="h-12 w-auto rounded-full border border-gray-300" />
+      <h1 class="text-2xl font-bold">Arakathir</h1>
     </div>
-  </header>
+
+    <!-- Hamburger for Mobile -->
+    <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Nav links (desktop only) -->
+    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-blue-600">Home</a>
+      <a href="about.html" class="hover:text-blue-600">About</a>
+      <a href="program.html" class="hover:text-blue-600">Program</a>
+      <a href="join.html" class="text-blue-600">Join</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu (below header) -->
+  <div id="mobileMenu" class="md:hidden hidden flex-col space-y-2 px-4 pb-4 text-sm font-medium">
+    <a href="index.html" class="hover:text-blue-600">Home</a>
+    <a href="about.html" class="hover:text-blue-600">About</a>
+    <a href="program.html" class="hover:text-blue-600">Program</a>
+    <a href="join.html" class="text-blue-600">Join</a>
+  </div>
+</header>
+
+
+
+<!-- JavaScript for toggle -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
 
   <!-- ✅ Hero Section -->
   <section class="text-center py-16 bg-gradient-to-r from-yellow-100 via-white to-green-100">
