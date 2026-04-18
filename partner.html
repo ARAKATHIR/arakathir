@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Arakathir - Partner with Us | Colleges & Institutions</title>
+    <!-- ✅ Favicon for browser tab -->
+    <link rel="icon" type="image/png" href="arakathir-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e1e2f; line-height: 1.5; scroll-behavior: smooth; }
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(8px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); z-index: 1000; padding: 0.7rem 2rem; }
+        .nav-container { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo img { height: 45px; width: auto; border-radius: 50%; object-fit: cover; }
+        .logo-text h1 { font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, #0b2b40, #1a6d5e); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo-text p { font-size: 0.7rem; color: #1a6d5e; font-weight: 500; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; font-weight: 600; color: #1e2a3a; transition: 0.2s; font-size: 0.95rem; }
+        .nav-links a:hover, .nav-links a.active { color: #1a6d5e; }
+        .nav-links a i { margin-right: 6px; }
+        .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: #1e2a3a; }
+        @media (max-width: 768px) {
+            .navbar { padding: 0.5rem 1rem; }
+            .logo img { height: 35px; }
+            .logo-text h1 { font-size: 1.2rem; }
+            .menu-toggle { display: block; }
+            .nav-links { position: fixed; top: 65px; left: -100%; width: 75%; height: calc(100vh - 65px); background: white; flex-direction: column; gap: 1.2rem; padding: 1.5rem; box-shadow: 2px 0 20px rgba(0,0,0,0.1); transition: 0.3s; z-index: 999; }
+            .nav-links.active { left: 0; }
+        }
+        .main-content { margin-top: 80px; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 2rem 2rem; }
+        .section { padding: 2rem 0; border-bottom: 1px solid #eef2f6; }
+        .badge { background: #e0f2e9; color: #1a6d5e; padding: 0.25rem 1rem; border-radius: 40px; font-size: 0.85rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+        h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; color: #0b2b40; }
+        .btn-primary { display: inline-block; background: #1a6d5e; color: white; padding: 0.8rem 2rem; border-radius: 40px; text-decoration: none; font-weight: 600; transition: 0.2s; border: none; cursor: pointer; }
+        .btn-primary:hover { background: #0e5548; }
+        footer { background: #0b2b40; color: #cbd5e1; padding: 2rem; text-align: center; }
+        input, select, textarea { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 12px; font-family: 'Inter', sans-serif; }
+        @media (max-width: 640px) { .container { padding: 1.5rem; } h2 { font-size: 1.5rem; } }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="arakathir-logo.png" alt="Arakathir Logo" onerror="this.style.display='none'">
+            <div class="logo-text">
+                <h1>Arakathir</h1>
+                <p>Quality Training. Minimum Cost. Maximum Care.</p>
+            </div>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
+            <li><a href="approach.html"><i class="fas fa-chalkboard-user"></i> Approach</a></li>
+            <li><a href="partner.html" class="active"><i class="fas fa-handshake"></i> Partner with us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="main-content">
+    <div class="container" style="text-align: center;">
+        <span class="badge"><i class="fas fa-handshake"></i> For Colleges & Institutions</span>
+        <h1 style="font-size: 2.5rem; font-weight: 800;">Partner with <span style="color:#1a6d5e;">Arakathir</span></h1>
+        <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Affordable, high-quality training with a personal counselor inside your college.</p>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div>
+                    <h2>Why partner with us?</h2>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Minimum budget</strong> – Lower than any competitor</li>
+                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>High quality training</strong> – IT industry experienced trainers</li>
+                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Separate personal counselor</strong> – Available all college hours</li>
+                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>24/7 doubt support</strong> – Students can ask anytime</li>
+                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Student-wise analysis report</strong> – Weekly progress</li>
+                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Placement support</strong> – Included, no extra cost</li>
+                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Final project guarantee</strong> – Working project submission</li>
+                    </ul>
+                </div>
+                <div style="background: #f0f7f4; border-radius: 28px; padding: 1.5rem;">
+                    <h3 style="font-size: 1.3rem;">🎯 What your college gets</h3>
+                    <div style="margin-top: 1rem;"><strong>1. Better placement records</strong><br><small>Students become job-ready</small></div>
+                    <div style="margin-top: 1rem;"><strong>2. Save management budget</strong><br><small>Lowest cost in market</small></div>
+                    <div style="margin-top: 1rem;"><strong>3. Complete transparency</strong><br><small>Weekly student-wise reports</small></div>
+                    <div style="margin-top: 1rem;"><strong>4. Zero management headache</strong><br><small>We handle everything</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" style="background: #F9FCFE;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div>
+                    <h2>📞 Contact us directly</h2>
+                    <div style="background: white; border-radius: 20px; padding: 1rem; margin-bottom: 1rem;">
+                        <i class="fas fa-user-tie" style="color:#1a6d5e;"></i> <strong>CEO & Founder:</strong> Jegadeesh K<br>
+                        <i class="fas fa-phone" style="color:#1a6d5e;"></i> <strong>CEO:</strong> <a href="tel:+918531046561" style="color:#1a6d5e;">8531046561</a>
+                    </div>
+                    <div style="background: white; border-radius: 20px; padding: 1rem;">
+                        <i class="fas fa-envelope" style="color:#1a6d5e;"></i> <strong>Email:</strong><br>
+                        <a href="mailto:arakathir.team@gmail.com" style="color:#1a6d5e;">arakathir.team@gmail.com</a>
+                    </div>
+                </div>
+                <div>
+                    <h2>📝 Send inquiry</h2>
+                    <form action="https://formsubmit.co/arakathir.team@gmail.com" method="POST" style="background: white; padding: 1.2rem; border-radius: 24px;">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New Partner Inquiry - Arakathir">
+                        <input type="text" name="college_name" placeholder="College Name *" required style="margin-bottom: 0.8rem;">
+                        <input type="text" name="name" placeholder="Your Name *" required style="margin-bottom: 0.8rem;">
+                        <select name="role" required style="margin-bottom: 0.8rem;">
+                            <option value="">Your Role *</option>
+                            <option value="Principal">Principal</option>
+                            <option value="HOD">HOD</option>
+                            <option value="Placement Officer">Placement Officer</option>
+                            <option value="Faculty">Faculty</option>
+                        </select>
+                        <input type="email" name="email" placeholder="Email *" required style="margin-bottom: 0.8rem;">
+                        <input type="tel" name="phone" placeholder="Phone *" required style="margin-bottom: 0.8rem;">
+                        <textarea name="message" rows="2" placeholder="Message"></textarea>
+                        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Send Inquiry →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="text-align: center; padding-bottom: 2rem;">
+        <a href="tel:+918531046561" class="btn-primary"><i class="fas fa-phone"></i> Call CEO: 8531046561</a>
+    </div>
+
+    <footer>
+        <p>© 2026 Arakathir — Quality Training. Minimum Cost. Maximum Care.</p>
+        <p><i class="fas fa-envelope"></i> arakathir.team@gmail.com | <i class="fas fa-user-tie"></i> CEO: 8531046561</p>
+    </footer>
+</div>
+
+<script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    if(menuToggle) {
+        menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+    }
+</script>
+</body>
+</html>

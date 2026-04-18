@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Arakathir - Quality Training. Minimum Cost. Maximum Care.</title>
+    <!-- ✅ Favicon for browser tab -->
+    <link rel="icon" type="image/png" href="arakathir-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1e1e2f;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            padding: 0.7rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0b2b40, #1a6d5e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo-text p {
+            font-size: 0.7rem;
+            color: #1a6d5e;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #1e2a3a;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #1a6d5e;
+        }
+
+        .nav-links a i {
+            margin-right: 6px;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #1e2a3a;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.5rem 1rem;
+            }
+            .logo img {
+                height: 35px;
+            }
+            .logo-text h1 {
+                font-size: 1.2rem;
+            }
+            .logo-text p {
+                font-size: 0.6rem;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                position: fixed;
+                top: 65px;
+                left: -100%;
+                width: 75%;
+                height: calc(100vh - 65px);
+                background: white;
+                flex-direction: column;
+                gap: 1.2rem;
+                padding: 1.5rem;
+                box-shadow: 2px 0 20px rgba(0,0,0,0.1);
+                transition: 0.3s;
+                z-index: 999;
+            }
+            .nav-links.active {
+                left: 0;
+            }
+        }
+
+        .main-content {
+            margin-top: 80px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 2rem;
+        }
+
+        .section {
+            padding: 2rem 0;
+            border-bottom: 1px solid #eef2f6;
+        }
+
+        .badge {
+            background: #e0f2e9;
+            color: #1a6d5e;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #0b2b40;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: #f9fbfd;
+            padding: 1.5rem;
+            border-radius: 24px;
+            border: 1px solid #eef2f6;
+        }
+
+        .card i {
+            font-size: 2rem;
+            color: #1a6d5e;
+            margin-bottom: 0.8rem;
+        }
+
+        .uniqueness-box {
+            background: linear-gradient(145deg, #f0f7f4, #ffffff);
+            border-left: 6px solid #1a6d5e;
+            padding: 2rem;
+            border-radius: 28px;
+            margin: 2rem 0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            padding: 0.7rem 1rem;
+            border-radius: 40px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .trust-item i {
+            color: #1a6d5e;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: #1a6d5e;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: #0e5548;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #1a6d5e;
+            color: #1a6d5e;
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+
+        .founder-note {
+            background: #fefaf0;
+            padding: 2rem;
+            border-radius: 28px;
+            text-align: center;
+            margin: 2rem 0;
+            border: 1px solid #ffe6c2;
+        }
+
+        footer {
+            background: #0b2b40;
+            color: #cbd5e1;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 1rem;
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="arakathir-logo.png" alt="Arakathir Logo" onerror="this.style.display='none'">
+            <div class="logo-text">
+                <h1>Arakathir</h1>
+                <p>Quality Training. Minimum Cost. Maximum Care.</p>
+            </div>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
+            <li><a href="approach.html"><i class="fas fa-chalkboard-user"></i> Approach</a></li>
+            <li><a href="partner.html"><i class="fas fa-handshake"></i> Partner with us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="main-content">
+    <div class="container" style="padding-top: 1rem;">
+        <span class="badge"><i class="fas fa-gem"></i> Trusted by colleges</span>
+        <h1 style="font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem;">We don't just train students.<br>We transform them into <span style="color:#1a6d5e;">industry-ready</span> professionals.</h1>
+        <p style="font-size: 1.1rem; max-width: 700px; margin-bottom: 2rem;">Affordable, high-quality training with personal counselors & 24/7 support.</p>
+        <a href="partner.html" class="btn-primary"><i class="fas fa-handshake"></i> Partner With Us →</a>
+        <a href="#why-trust" class="btn-outline">Why trust us</a>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <span class="badge">Who we are</span>
+                    <h2>We are Arakathir</h2>
+                    <p>Founded by <strong>Jegadeesh K</strong>, an IT industry professional. We partner with colleges to deliver <strong>technical + verbal training</strong> at a very minimum budget.</p>
+                    <p style="margin-top: 1rem;">Our trainers have real IT industry experience. Plus, we assign a <strong>separate personal counselor</strong> inside your college – available all working hours to clear doubts and guide careers.</p>
+                </div>
+                <div>
+                    <span class="badge">For colleges & students</span>
+                    <h2>What you gain</h2>
+                    <div style="background:#F4F9F6; border-radius: 24px; padding: 1.2rem;">
+                        <p><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Colleges:</strong> Better placements, low budget, detailed reports</p>
+                        <p style="margin-top: 0.8rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Students:</strong> Job-ready skills, personal counselor, 24/7 support, project guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" style="background: #F9FCFE;">
+        <div class="container">
+            <div style="text-align: center;">
+                <span class="badge">Simple process</span>
+                <h2>How we work</h2>
+            </div>
+            <div class="grid-2" style="grid-template-columns: repeat(auto-fit, minmax(170px,1fr));">
+                <div class="card"><i class="fas fa-clipboard-list"></i><h3>1. Assessment</h3><p>Evaluate current skill level</p></div>
+                <div class="card"><i class="fas fa-chalkboard-user"></i><h3>2. Training</h3><p>Technical + Verbal by IT experts</p></div>
+                <div class="card"><i class="fas fa-user-graduate"></i><h3>3. Counseling</h3><p>Personal counselor in college</p></div>
+                <div class="card"><i class="fas fa-chart-line"></i><h3>4. Analysis</h3><p>Weekly progress per student</p></div>
+                <div class="card"><i class="fas fa-laptop-code"></i><h3>5. Project</h3><p>Final project + placement support</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="uniqueness-box">
+            <i class="fas fa-user-plus" style="font-size: 2rem; color:#1a6d5e;"></i>
+            <h2 style="margin-top: 0.5rem;">✨ Our Uniqueness: Personal Counselor</h2>
+            <p><strong>Not just a trainer.</strong> We appoint a dedicated person available during <strong>college working hours</strong> just to clear doubts, talk about industry future, and give one-on-one career guidance.</p>
+            <p style="margin-top: 0.8rem;">✅ 24/7 doubt support for any field – no student left behind.</p>
+        </div>
+    </div>
+
+    <div id="why-trust" class="section">
+        <div class="container">
+            <span class="badge">Why trust us</span>
+            <h2>8 reasons colleges choose Arakathir</h2>
+            <div class="trust-grid">
+                <div class="trust-item"><i class="fas fa-laptop-code"></i> Real IT industry trainers</div>
+                <div class="trust-item"><i class="fas fa-chalkboard-user"></i> Separate personal counselor</div>
+                <div class="trust-item"><i class="fas fa-headset"></i> 24/7 doubt support</div>
+                <div class="trust-item"><i class="fas fa-coins"></i> Minimum budget in market</div>
+                <div class="trust-item"><i class="fas fa-chart-simple"></i> High quality > costly competitors</div>
+                <div class="trust-item"><i class="fas fa-chart-line"></i> Student-wise analysis report</div>
+                <div class="trust-item"><i class="fas fa-briefcase"></i> Placement support included</div>
+                <div class="trust-item"><i class="fas fa-project-diagram"></i> Final project guarantee</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="founder-note">
+            <i class="fas fa-quote-left" style="font-size: 2rem; color: #b9944e; opacity: 0.5;"></i>
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">"I personally ensure every student gets attention. If a student has a doubt, my counselor is physically in their college. That's my promise. Our budget is the lowest – because quality should not be expensive."</p>
+            <p style="margin-top: 1rem; font-weight: 700;">— Jegadeesh K, Founder & CEO, Arakathir</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container" style="text-align: center;">
+            <h2>Ready to transform your college placements?</h2>
+            <p style="margin-bottom: 1.5rem;">Get our budget & proposal – minimal cost, maximum impact.</p>
+            <a href="partner.html" class="btn-primary"><i class="fas fa-envelope"></i> Partner with us</a>
+            <p style="margin-top: 1.5rem;"><i class="fas fa-envelope"></i> arakathir.team@gmail.com | <i class="fas fa-user-tie"></i> CEO: <strong>8531046561</strong></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Arakathir — Quality Training. Minimum Cost. Maximum Care.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;"><i class="fas fa-envelope"></i> arakathir.team@gmail.com | <i class="fas fa-user-tie"></i> CEO: 8531046561</p>
+    </footer>
+</div>
+
+<script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    if(menuToggle) {
+        menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+    }
+</script>
+</body>
+</html>
