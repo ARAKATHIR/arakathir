@@ -1,0 +1,11 @@
+# robots.txt for Arakathir website
+# Allows all search engines to crawl all pages
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.arakathir.in/sitemap.xml
+
+# Disallow nothing - all pages are important
+Disallow:
