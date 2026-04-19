@@ -35,435 +35,614 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-        font-family: 'Inter', sans-serif;
-        background-color: #ffffff;
-        color: #1e1e2f;
-        line-height: 1.5;
-        scroll-behavior: smooth;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1e1e2f;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
 
-    /* ===== FIXED NAVIGATION BAR - IDENTICAL ON ALL PAGES ===== */
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(8px);
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-        z-index: 1000;
-        padding: 0.8rem 2rem;
-    }
-
-    .nav-container {
-        max-width: 1280px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .logo img {
-        height: 45px;
-        width: auto;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    .logo-text h1 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, #0b2b40, #1a6d5e);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-
-    .logo-text p {
-        font-size: 0.7rem;
-        color: #1a6d5e;
-        font-weight: 500;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        font-weight: 600;
-        color: #1e2a3a;
-        transition: 0.2s;
-        font-size: 0.95rem;
-    }
-
-    .nav-links a:hover, .nav-links a.active {
-        color: #1a6d5e;
-    }
-
-    .nav-links a i {
-        margin-right: 6px;
-    }
-
-    /* ===== MOBILE MENU BUTTON - ALWAYS VISIBLE AND PROPERLY POSITIONED ===== */
-    .menu-toggle {
-        display: none;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 8px;
-        font-size: 1.6rem;
-        color: #1a6d5e;
-        z-index: 1001;
-    }
-
-    .menu-toggle:focus {
-        outline: none;
-    }
-
-    /* ===== RESPONSIVE STYLES ===== */
-    @media (max-width: 768px) {
+        /* ===== FIXED NAVIGATION BAR ===== */
         .navbar {
-            padding: 0.6rem 1.2rem;
-        }
-
-        .logo img {
-            height: 35px;
-        }
-
-        .logo-text h1 {
-            font-size: 1.2rem;
-        }
-
-        .logo-text p {
-            font-size: 0.6rem;
-        }
-
-        .menu-toggle {
-            display: block;
-        }
-
-        .nav-links {
             position: fixed;
             top: 0;
-            right: -100%;
-            width: 70%;
-            max-width: 280px;
-            height: 100vh;
-            background: white;
-            flex-direction: column;
-            gap: 1.2rem;
-            padding: 5rem 1.5rem 2rem;
-            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
-            transition: 0.3s ease-in-out;
-            z-index: 1000;
-            list-style: none;
-            margin: 0;
-        }
-
-        .nav-links.active {
+            left: 0;
             right: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+            padding: 0.8rem 2rem;
         }
 
-        .nav-links li {
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
         }
 
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0b2b40, #1a6d5e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo-text p {
+            font-size: 0.7rem;
+            color: #1a6d5e;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
         .nav-links a {
-            display: block;
-            padding: 10px 0;
-            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: 600;
+            color: #1e2a3a;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #1a6d5e;
+        }
+
+        .nav-links a i {
+            margin-right: 6px;
+        }
+
+        /* ===== MOBILE MENU BUTTON ===== */
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            font-size: 1.6rem;
+            color: #1a6d5e;
+            z-index: 1001;
+        }
+
+        .menu-toggle:focus {
+            outline: none;
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.6rem 1.2rem;
+            }
+
+            .logo img {
+                height: 35px;
+            }
+
+            .logo-text h1 {
+                font-size: 1.2rem;
+            }
+
+            .logo-text p {
+                font-size: 0.6rem;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                max-width: 280px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                gap: 1.2rem;
+                padding: 5rem 1.5rem 2rem;
+                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
+                transition: 0.3s ease-in-out;
+                z-index: 1000;
+                list-style: none;
+                margin: 0;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 10px 0;
+                font-size: 1.1rem;
+                border-bottom: 1px solid #eef2f6;
+            }
+        }
+
+        .main-content {
+            margin-top: 80px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 2rem;
+        }
+
+        .section {
+            padding: 2rem 0;
             border-bottom: 1px solid #eef2f6;
         }
-    }
 
-    .main-content {
-        margin-top: 80px;
-    }
-
-    .container {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 2rem 2rem;
-    }
-
-    .section {
-        padding: 2rem 0;
-        border-bottom: 1px solid #eef2f6;
-    }
-
-    .badge {
-        background: #e0f2e9;
-        color: #1a6d5e;
-        padding: 0.25rem 1rem;
-        border-radius: 40px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        display: inline-block;
-        margin-bottom: 1rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        color: #0b2b40;
-    }
-
-    .grid-2 {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        margin-top: 1.5rem;
-    }
-
-    .card {
-        background: #f9fbfd;
-        padding: 1.5rem;
-        border-radius: 24px;
-        border: 1px solid #eef2f6;
-    }
-
-    .card i {
-        font-size: 2rem;
-        color: #1a6d5e;
-        margin-bottom: 0.8rem;
-    }
-
-    .uniqueness-box {
-        background: linear-gradient(145deg, #f0f7f4, #ffffff);
-        border-left: 6px solid #1a6d5e;
-        padding: 2rem;
-        border-radius: 28px;
-        margin: 2rem 0;
-    }
-
-    .trust-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
-
-    .trust-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        background: #ffffff;
-        padding: 0.7rem 1rem;
-        border-radius: 40px;
-        border: 1px solid #e2e8f0;
-    }
-
-    .trust-item i {
-        color: #1a6d5e;
-    }
-
-    .btn-primary {
-        display: inline-block;
-        background: #1a6d5e;
-        color: white;
-        padding: 0.8rem 2rem;
-        border-radius: 40px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: 0.2s;
-    }
-
-    .btn-primary:hover {
-        background: #0e5548;
-    }
-
-    .btn-outline {
-        background: transparent;
-        border: 2px solid #1a6d5e;
-        color: #1a6d5e;
-        padding: 0.7rem 1.8rem;
-        border-radius: 40px;
-        font-weight: 600;
-        text-decoration: none;
-        margin-left: 1rem;
-    }
-
-    .founder-note {
-        background: #fefaf0;
-        padding: 2rem;
-        border-radius: 28px;
-        text-align: center;
-        margin: 2rem 0;
-        border: 1px solid #ffe6c2;
-    }
-
-    footer {
-        background: #0b2b40;
-        color: #cbd5e1;
-        padding: 2rem;
-        text-align: center;
-    }
-
-    @media (max-width: 640px) {
-        .container {
-            padding: 1.5rem;
+        .section-light {
+            background: #F9FCFE;
         }
-        h2 {
-            font-size: 1.5rem;
-        }
-        .btn-outline {
-            margin-left: 0;
-            margin-top: 1rem;
+
+        .badge {
+            background: #e0f2e9;
+            color: #1a6d5e;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
             display: inline-block;
+            margin-bottom: 1rem;
         }
-    }
-</style>
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #0b2b40;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #0b2b40;
+        }
+
+        /* ===== WHY PARTNER LIST ===== */
+        .partner-list {
+            list-style: none;
+        }
+
+        .partner-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .partner-list li i {
+            color: #1a6d5e;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        /* ===== BENEFITS CARD ===== */
+        .benefits-card {
+            background: linear-gradient(145deg, #f0f7f4, #ffffff);
+            border-radius: 28px;
+            padding: 1.8rem;
+            border: 1px solid #e0ece6;
+        }
+
+        .benefit-item {
+            margin-top: 1.2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e0ece6;
+        }
+
+        .benefit-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .benefit-number {
+            display: inline-block;
+            background: #1a6d5e;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* ===== CONTACT CARDS ===== */
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-card i {
+            font-size: 1.2rem;
+            width: 30px;
+            color: #1a6d5e;
+        }
+
+        .contact-card a {
+            color: #1a6d5e;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== FORM STYLES ===== */
+        .inquiry-form {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            background: #ffffff;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #1a6d5e;
+            box-shadow: 0 0 0 3px rgba(26, 109, 94, 0.1);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary {
+            display: inline-block;
+            background: #1a6d5e;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: #0e5548;
+            transform: scale(1.02);
+        }
+
+        .btn-large {
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #0b2b40;
+            color: #cbd5e1;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* ===== GRID LAYOUTS ===== */
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .two-columns {
+                gap: 1.2rem;
+            }
+
+            .benefits-card {
+                padding: 1.2rem;
+            }
+
+            .inquiry-form {
+                padding: 1.2rem;
+            }
+
+            input, select, textarea {
+                padding: 0.7rem 0.8rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">
-            <img src="arakathir-logo.png" alt="Arakathir Logo - Partner with Us">
-            <div class="logo-text">
-                <h1>Arakathir</h1>
-                <p>Quality Training. Minimum Cost. Maximum Care.</p>
-            </div>
-        </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
-            <li><a href="approach.html"><i class="fas fa-chalkboard-user"></i> Approach</a></li>
-            <li><a href="partner.html" class="active"><i class="fas fa-handshake"></i> Partner with us</a></li>
-        </ul>
-    </div>
-</nav>
-
-<div class="main-content">
-    <div class="container" style="text-align: center;">
-        <span class="badge"><i class="fas fa-handshake"></i> For Colleges & Institutions</span>
-        <h1 style="font-size: 2.5rem; font-weight: 800;">Partner with <span style="color:#1a6d5e;">Arakathir</span></h1>
-        <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Affordable, high-quality technical and verbal training with a dedicated personal counselor inside your college.</p>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div>
-                    <h2>Why partner with us?</h2>
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Minimum budget</strong> – Lower than any competitor</li>
-                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>High quality training</strong> – IT industry experienced trainers</li>
-                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Separate personal counselor</strong> – Available all college hours</li>
-                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>24/7 doubt support</strong> – Students can ask anytime</li>
-                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Student-wise analysis report</strong> – Weekly progress</li>
-                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Placement support</strong> – Included, no extra cost</li>
-                        <li style="margin-bottom: 0.7rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Final project guarantee</strong> – Working project submission</li>
-                    </ul>
-                </div>
-                <div style="background: #f0f7f4; border-radius: 28px; padding: 1.5rem;">
-                    <h3 style="font-size: 1.3rem;">🎯 What your college gets</h3>
-                    <div style="margin-top: 1rem;"><strong>1. Better placement records</strong><br><small>Students become job-ready</small></div>
-                    <div style="margin-top: 1rem;"><strong>2. Save management budget</strong><br><small>Lowest cost in market</small></div>
-                    <div style="margin-top: 1rem;"><strong>3. Complete transparency</strong><br><small>Weekly student-wise reports</small></div>
-                    <div style="margin-top: 1rem;"><strong>4. Zero management headache</strong><br><small>We handle everything</small></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="arakathir-logo.png" alt="Arakathir Logo - Partner with Us">
+                <div class="logo-text">
+                    <h1>Arakathir</h1>
+                    <p>Quality Training. Minimum Cost. Maximum Care.</p>
                 </div>
             </div>
+            <button class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
+                <li><a href="approach.html"><i class="fas fa-chalkboard-user"></i> Approach</a></li>
+                <li><a href="partner.html" class="active"><i class="fas fa-handshake"></i> Partner with us</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <div class="section" style="background: #F9FCFE;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div>
-                    <h2>📞 Contact us directly</h2>
-                    <div style="background: white; border-radius: 20px; padding: 1rem; margin-bottom: 1rem;">
-                        <i class="fas fa-user-tie" style="color:#1a6d5e;"></i> <strong>CEO & Founder:</strong> Jegadeesh K<br>
-                        <i class="fas fa-phone" style="color:#1a6d5e;"></i> <strong>CEO:</strong> <a href="tel:+918531046561" style="color:#1a6d5e;">8531046561</a>
+    <div class="main-content">
+        <!-- Hero Section -->
+        <div class="container" style="text-align: center;">
+            <span class="badge"><i class="fas fa-handshake"></i> For Colleges & Institutions</span>
+            <h1 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem;">Partner with <span style="color:#1a6d5e;">Arakathir</span></h1>
+            <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; color: #4a5568;">Affordable, high-quality technical and verbal training with a dedicated personal counselor inside your college.</p>
+        </div>
+
+        <!-- Why Partner Section -->
+        <div class="section">
+            <div class="container">
+                <div class="two-columns">
+                    <!-- Left Column - Why Partner -->
+                    <div>
+                        <h2>Why partner with us?</h2>
+                        <ul class="partner-list">
+                            <li><i class="fas fa-check-circle"></i> <strong>Minimum budget</strong> – Lower than any competitor</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>High quality training</strong> – IT industry experienced trainers</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Separate personal counselor</strong> – Available all college hours</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>24/7 doubt support</strong> – Students can ask anytime</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Student-wise analysis report</strong> – Weekly progress</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Placement support</strong> – Included, no extra cost</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Final project guarantee</strong> – Working project submission</li>
+                        </ul>
                     </div>
-                    <div style="background: white; border-radius: 20px; padding: 1rem;">
-                        <i class="fas fa-envelope" style="color:#1a6d5e;"></i> <strong>Email:</strong><br>
-                        <a href="mailto:arakathir.team@gmail.com" style="color:#1a6d5e;">arakathir.team@gmail.com</a>
+
+                    <!-- Right Column - Benefits Card -->
+                    <div class="benefits-card">
+                        <h3 style="margin-top: 0;">🎯 What your college gets</h3>
+                        <div class="benefit-item">
+                            <span class="benefit-number">1</span>
+                            <strong>Better placement records</strong>
+                            <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Students become job-ready, increasing your placement percentage</p>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-number">2</span>
+                            <strong>Save management budget</strong>
+                            <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Lowest cost in market – more savings, same or better results</p>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-number">3</span>
+                            <strong>Complete transparency</strong>
+                            <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Weekly student-wise reports keep you informed about every student</p>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-number">4</span>
+                            <strong>Zero management headache</strong>
+                            <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">We handle everything – training, counseling, support, reporting</p>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <h2>📝 Send inquiry</h2>
-                    <form action="https://formsubmit.co/arakathir.team@gmail.com" method="POST" style="background: white; padding: 1.2rem; border-radius: 24px;">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_subject" value="New Partner Inquiry - Arakathir">
-                        <input type="text" name="college_name" placeholder="College Name *" required>
-                        <input type="text" name="name" placeholder="Your Name *" required>
-                        <select name="role" required>
-                            <option value="">Your Role *</option>
-                            <option value="Principal">Principal</option>
-                            <option value="HOD">HOD</option>
-                            <option value="Placement Officer">Placement Officer</option>
-                            <option value="Faculty">Faculty</option>
-                        </select>
-                        <input type="email" name="email" placeholder="Email *" required>
-                        <input type="tel" name="phone" placeholder="Phone *" required>
-                        <textarea name="message" rows="2" placeholder="Message (optional)"></textarea>
-                        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 0;">Send Inquiry →</button>
-                    </form>
                 </div>
             </div>
         </div>
+
+        <!-- Contact & Form Section -->
+        <div class="section section-light">
+            <div class="container">
+                <div class="two-columns">
+                    <!-- Left Column - Direct Contact -->
+                    <div>
+                        <h2>📞 Contact us directly</h2>
+                        <div class="contact-card">
+                            <i class="fas fa-user-tie"></i>
+                            <strong>CEO & Founder:</strong> Jegadeesh K<br>
+                            <i class="fas fa-phone"></i>
+                            <strong>CEO:</strong> <a href="tel:+918531046561">8531046561</a>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:arakathir.team@gmail.com">arakathir.team@gmail.com</a>
+                        </div>
+                        <div style="background: #e0f2e9; border-radius: 20px; padding: 1.2rem; margin-top: 1rem; border-left: 4px solid #1a6d5e;">
+                            <i class="fas fa-quote-left" style="color: #1a6d5e; opacity: 0.5;"></i>
+                            <p style="font-style: italic; margin-top: 0.5rem;">"I personally ensure every student gets attention. Our budget is the lowest in the market – because quality should not be expensive."</p>
+                            <p style="font-weight: bold; margin-top: 0.5rem;">— Jegadeesh K, Founder</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Inquiry Form -->
+                    <div>
+                        <h2>📝 Send inquiry</h2>
+                        <form action="https://formsubmit.co/arakathir.team@gmail.com" method="POST" class="inquiry-form">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_subject" value="New Partner Inquiry - Arakathir">
+                            
+                            <div class="form-group">
+                                <input type="text" name="college_name" placeholder="🏛️ College Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="👤 Your Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <select name="role" required>
+                                    <option value="">📌 Your Role *</option>
+                                    <option value="Principal">Principal</option>
+                                    <option value="HOD">Head of Department (HOD)</option>
+                                    <option value="Placement Officer">Placement Officer</option>
+                                    <option value="Faculty">Faculty</option>
+                                    <option value="Management">College Management</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="✉️ Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="📞 Phone Number *" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" rows="3" placeholder="💬 Message (optional) - Tell us about your college, batch size, or any questions"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" style="width: 100%;">Send Inquiry →</button>
+                            <p style="font-size: 0.7rem; text-align: center; margin-top: 0.8rem; color: #718096;">We reply within 4 working hours</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="container" style="padding-top: 2rem; padding-bottom: 1rem;">
+            <h2 style="text-align: center;">❓ Frequently Asked Questions</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                <div style="background: #ffffff; border: 1px solid #eef2f6; border-radius: 20px; padding: 1.2rem; transition: all 0.2s;">
+                    <i class="fas fa-coins" style="color: #1a6d5e; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">What is the budget?</h3>
+                    <p style="color: #5e727b; font-size: 0.9rem;">Minimum in the market. Contact us for exact quote based on student count.</p>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #eef2f6; border-radius: 20px; padding: 1.2rem; transition: all 0.2s;">
+                    <i class="fas fa-user-graduate" style="color: #1a6d5e; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Is counselor available daily?</h3>
+                    <p style="color: #5e727b; font-size: 0.9rem;">Yes. Physically in your college during working hours.</p>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #eef2f6; border-radius: 20px; padding: 1.2rem; transition: all 0.2s;">
+                    <i class="fas fa-users" style="color: #1a6d5e; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Minimum batch size?</h3>
+                    <p style="color: #5e727b; font-size: 0.9rem;">We work with any batch size – from 20 to 500+ students.</p>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #eef2f6; border-radius: 20px; padding: 1.2rem; transition: all 0.2s;">
+                    <i class="fas fa-handshake" style="color: #1a6d5e; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">How to start partnership?</h3>
+                    <p style="color: #5e727b; font-size: 0.9rem;">Fill the form or call 8531046561. We'll discuss and sign an agreement.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div class="container" style="padding-top: 1rem; padding-bottom: 2rem;">
+            <div style="background: linear-gradient(135deg, #0b2b40, #1a6d5e); border-radius: 32px; padding: 2.5rem; text-align: center; color: white;">
+                <i class="fas fa-phone-alt" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                <h2 style="color: white; margin-bottom: 0.5rem;">Ready to transform your college placements?</h2>
+                <p style="margin-bottom: 1.5rem;">Get a free quote within 4 hours. No obligation.</p>
+                <a href="tel:+918531046561" class="btn-primary" style="background: white; color: #1a6d5e; font-weight: 700;">📞 Call CEO: 8531046561</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Arakathir — Quality Training. Minimum Cost. Maximum Care.</p>
+            <p style="margin-top: 0.5rem;">
+                <i class="fas fa-envelope"></i> arakathir.team@gmail.com | 
+                <i class="fas fa-user-tie"></i> CEO: <a href="tel:+918531046561">8531046561</a>
+            </p>
+        </footer>
     </div>
 
-    <div class="container" style="text-align: center; padding-bottom: 2rem;">
-        <a href="tel:+918531046561" class="btn-primary"><i class="fas fa-phone"></i> Call CEO: 8531046561</a>
-    </div>
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
 
-    <footer>
-        <p>© 2026 Arakathir — Quality Training. Minimum Cost. Maximum Care.</p>
-        <p><i class="fas fa-envelope"></i> arakathir.team@gmail.com | <i class="fas fa-user-tie"></i> CEO: 8531046561</p>
-    </footer>
-</div>
-
-<script>
-    const menuToggle = document.getElementById('mobile-menu');
-    const navLinks = document.getElementById('nav-links');
-
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navLinks.classList.toggle('active');
             });
-        });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (navLinks.classList.contains('active') && 
-                !navLinks.contains(event.target) && 
-                !menuToggle.contains(event.target)) {
-                navLinks.classList.remove('active');
-            }
-        });
-    }
-</script>
+            // Close menu when clicking on a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (navLinks.classList.contains('active') &&
+                    !navLinks.contains(event.target) &&
+                    !menuToggle.contains(event.target)) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
