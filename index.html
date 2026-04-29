@@ -7,16 +7,16 @@
 
     <title>Arakathir – Quality Training with Personal Counselor for Colleges</title>
 
-    <!-- ✅ SEO Meta Tags -->
+    <!-- ✅ SEO Meta Tags (Updated domain to arakathir.com) -->
     <meta name="description" content="Arakathir provides affordable technical and verbal training for college students with a separate personal counselor. 24/7 support, placement assistance, and project guarantee. Minimum budget, maximum quality.">
     <meta name="keywords" content="Arakathir, college training, placement training, technical training, verbal training, personal counselor, student development, Tamil Nadu colleges, affordable training, placement support">
     <meta name="author" content="Jegadeesh K, Founder & CEO, Arakathir">
 
-    <!-- ✅ Open Graph for Social Sharing (Facebook, LinkedIn, WhatsApp) -->
+    <!-- ✅ Open Graph for Social Sharing (Updated URL) -->
     <meta property="og:title" content="Arakathir – Quality Training with Personal Counselor for Colleges" />
     <meta property="og:description" content="Affordable technical and verbal training for college students. Separate personal counselor, 24/7 support, placement assistance, project guarantee. Minimum budget, maximum quality." />
     <meta property="og:image" content="arakathir-logo.png" />
-    <meta property="og:url" content="https://www.arakathir.in" />
+    <meta property="og:url" content="https://www.arakathir.com" />
     <meta property="og:type" content="website" />
 
     <!-- ✅ Twitter Card for Social Sharing -->
@@ -28,8 +28,8 @@
     <!-- ✅ Favicon -->
     <link rel="icon" type="image/png" href="arakathir-logo.png" />
 
-    <!-- ✅ Canonical URL (prevides duplicate content issues) -->
-    <link rel="canonical" href="https://www.arakathir.in/index.html" />
+    <!-- ✅ Canonical URL (Updated to new domain) -->
+    <link rel="canonical" href="https://www.arakathir.com/index.html" />
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -43,7 +43,7 @@
 
     body {
         font-family: 'Inter', sans-serif;
-        background-color: #ffffff;
+        background: linear-gradient(145deg, #ffffff 0%, #fcf9f0 100%);
         color: #1e1e2f;
         line-height: 1.5;
         scroll-behavior: smooth;
@@ -56,11 +56,12 @@
         left: 0;
         right: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(8px);
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        background: rgba(255, 255, 245, 0.98);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         z-index: 1000;
         padding: 0.8rem 2rem;
+        border-bottom: 1px solid rgba(26, 109, 94, 0.2);
     }
 
     .nav-container {
@@ -83,21 +84,27 @@
         width: auto;
         border-radius: 50%;
         object-fit: cover;
+        border: 2px solid #f4b942;
+        box-shadow: 0 4px 8px rgba(244, 185, 66, 0.2);
     }
 
     .logo-text h1 {
         font-size: 1.5rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, #0b2b40, #1a6d5e);
+        font-weight: 800;
+        background: linear-gradient(135deg, #1a4d3e, #e67e22, #c0392b);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        letter-spacing: -0.3px;
     }
 
     .logo-text p {
         font-size: 0.7rem;
-        color: #1a6d5e;
-        font-weight: 500;
+        background: linear-gradient(90deg, #1a6d5e, #f39c12);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-weight: 600;
     }
 
     .nav-links {
@@ -109,20 +116,33 @@
     .nav-links a {
         text-decoration: none;
         font-weight: 600;
-        color: #1e2a3a;
+        color: #2c3e2f;
         transition: 0.2s;
         font-size: 0.95rem;
-    }
-
-    .nav-links a:hover, .nav-links a.active {
-        color: #1a6d5e;
+        position: relative;
     }
 
     .nav-links a i {
         margin-right: 6px;
+        color: #e67e22;
     }
 
-    /* ===== MOBILE MENU BUTTON - ALWAYS VISIBLE AND PROPERLY POSITIONED ===== */
+    .nav-links a:hover, .nav-links a.active {
+        color: #e67e22;
+    }
+
+    .nav-links a.active::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #f39c12, #e67e22);
+        border-radius: 4px;
+    }
+
+    /* ===== MOBILE MENU BUTTON ===== */
     .menu-toggle {
         display: none;
         background: transparent;
@@ -130,12 +150,8 @@
         cursor: pointer;
         padding: 8px;
         font-size: 1.6rem;
-        color: #1a6d5e;
+        color: #e67e22;
         z-index: 1001;
-    }
-
-    .menu-toggle:focus {
-        outline: none;
     }
 
     /* ===== RESPONSIVE STYLES ===== */
@@ -167,15 +183,16 @@
             width: 70%;
             max-width: 280px;
             height: 100vh;
-            background: white;
+            background: #fffbf0;
             flex-direction: column;
             gap: 1.2rem;
             padding: 5rem 1.5rem 2rem;
-            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
             transition: 0.3s ease-in-out;
             z-index: 1000;
             list-style: none;
             margin: 0;
+            border-left: 3px solid #f39c12;
         }
 
         .nav-links.active {
@@ -190,7 +207,7 @@
             display: block;
             padding: 10px 0;
             font-size: 1.1rem;
-            border-bottom: 1px solid #eef2f6;
+            border-bottom: 1px solid #ffeecc;
         }
     }
 
@@ -205,26 +222,32 @@
     }
 
     .section {
-        padding: 2rem 0;
-        border-bottom: 1px solid #eef2f6;
+        padding: 3rem 0;
+        border-bottom: 1px solid #ffe6c2;
+        background: rgba(255, 248, 225, 0.4);
     }
 
     .badge {
-        background: #e0f2e9;
-        color: #1a6d5e;
-        padding: 0.25rem 1rem;
+        background: linear-gradient(110deg, #fef5e7, #ffe6c2);
+        color: #b45f1b;
+        padding: 0.35rem 1.2rem;
         border-radius: 40px;
-        font-size: 0.85rem;
-        font-weight: 600;
+        font-size: 0.75rem;
+        font-weight: 700;
         display: inline-block;
         margin-bottom: 1rem;
+        border-left: 3px solid #f39c12;
+        letter-spacing: 0.5px;
     }
 
     h2 {
         font-size: 2rem;
-        font-weight: 700;
+        font-weight: 800;
         margin-bottom: 1.5rem;
-        color: #0b2b40;
+        background: linear-gradient(120deg, #1b4d3c, #c4451a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
     }
 
     .grid-2 {
@@ -235,24 +258,38 @@
     }
 
     .card {
-        background: #f9fbfd;
-        padding: 1.5rem;
-        border-radius: 24px;
-        border: 1px solid #eef2f6;
+        background: #ffffffdd;
+        backdrop-filter: blur(4px);
+        padding: 1.8rem;
+        border-radius: 32px;
+        border: 1px solid rgba(243, 156, 18, 0.3);
+        transition: all 0.25s ease;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        border-color: #f39c12;
+        box-shadow: 0 20px 30px -12px rgba(230, 126, 34, 0.2);
+        background: #ffffff;
     }
 
     .card i {
-        font-size: 2rem;
-        color: #1a6d5e;
+        font-size: 2.4rem;
+        background: linear-gradient(135deg, #1a6d5e, #e67e22);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
         margin-bottom: 0.8rem;
     }
 
     .uniqueness-box {
-        background: linear-gradient(145deg, #f0f7f4, #ffffff);
-        border-left: 6px solid #1a6d5e;
+        background: linear-gradient(125deg, #fef7e0, #fff3e0);
+        border-left: 8px solid #f39c12;
         padding: 2rem;
-        border-radius: 28px;
+        border-radius: 40px;
         margin: 2rem 0;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.05);
     }
 
     .trust-grid {
@@ -265,57 +302,77 @@
     .trust-item {
         display: flex;
         align-items: center;
-        gap: 10px;
-        background: #ffffff;
-        padding: 0.7rem 1rem;
-        border-radius: 40px;
-        border: 1px solid #e2e8f0;
+        gap: 12px;
+        background: linear-gradient(95deg, #ffffff, #fffaf2);
+        padding: 0.8rem 1.2rem;
+        border-radius: 60px;
+        border: 1px solid #ffdc97;
+        transition: 0.1s linear;
     }
 
     .trust-item i {
-        color: #1a6d5e;
+        font-size: 1.3rem;
+        color: #e67e22;
     }
 
     .btn-primary {
         display: inline-block;
-        background: #1a6d5e;
+        background: linear-gradient(95deg, #1a6d5e, #e67e22);
         color: white;
-        padding: 0.8rem 2rem;
-        border-radius: 40px;
+        padding: 0.85rem 2.2rem;
+        border-radius: 60px;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 700;
         transition: 0.2s;
+        box-shadow: 0 6px 14px rgba(230,126,34,0.25);
+        border: none;
     }
 
     .btn-primary:hover {
-        background: #0e5548;
+        background: linear-gradient(95deg, #e67e22, #1a6d5e);
+        transform: scale(1.02);
+        box-shadow: 0 10px 18px rgba(243,156,18,0.4);
     }
 
     .btn-outline {
         background: transparent;
-        border: 2px solid #1a6d5e;
-        color: #1a6d5e;
+        border: 2px solid #e67e22;
+        color: #b45f1b;
         padding: 0.7rem 1.8rem;
-        border-radius: 40px;
-        font-weight: 600;
+        border-radius: 60px;
+        font-weight: 700;
         text-decoration: none;
         margin-left: 1rem;
+        transition: 0.2s;
+    }
+
+    .btn-outline:hover {
+        background: #fdf4e0;
+        border-color: #f39c12;
+        color: #c4451a;
     }
 
     .founder-note {
-        background: #fefaf0;
-        padding: 2rem;
-        border-radius: 28px;
+        background: radial-gradient(ellipse at 20% 30%, #fff6ea, #fff0e0);
+        padding: 2.2rem;
+        border-radius: 48px;
         text-align: center;
         margin: 2rem 0;
-        border: 1px solid #ffe6c2;
+        border: 2px solid #ffdeae;
+        box-shadow: 0 20px 30px -15px rgba(0,0,0,0.08);
     }
 
     footer {
-        background: #0b2b40;
-        color: #cbd5e1;
+        background: #1f2f1c;
+        color: #fdd49a;
         padding: 2rem;
         text-align: center;
+        border-top: 3px solid #e67e22;
+    }
+
+    /* Rainbow animated accent on hero */
+    .hero-colorful {
+        background: linear-gradient(105deg, #fff8ed, #ffffff);
     }
 
     @media (max-width: 640px) {
@@ -323,7 +380,7 @@
             padding: 1.5rem;
         }
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
         }
         .btn-outline {
             margin-left: 0;
@@ -331,7 +388,18 @@
             display: inline-block;
         }
     }
-</style>
+
+    /* extra vibrant touches */
+    .grid-2 .card h3 {
+        color: #c4451a;
+        font-weight: 700;
+    }
+    .trust-item:hover {
+        background: #fff1df;
+        border-color: #f39c12;
+        transform: translateX(5px);
+    }
+    </style>
 </head>
 
 <body>
@@ -358,10 +426,10 @@
 </nav>
 
 <div class="main-content">
-    <div class="container" style="padding-top: 1rem;">
+    <div class="container hero-colorful" style="padding-top: 1rem;">
         <span class="badge"><i class="fas fa-gem"></i> Trusted by colleges across Tamil Nadu</span>
-        <h1 style="font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem;">We don't just train students.<br>We transform them into <span style="color:#1a6d5e;">industry-ready</span> professionals.</h1>
-        <p style="font-size: 1.1rem; max-width: 700px; margin-bottom: 2rem;">Affordable, high-quality technical and verbal training with a dedicated personal counselor inside your college. 24/7 support, placement assistance, and project guarantee.</p>
+        <h1 style="font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; background: linear-gradient(125deg, #154e3a, #d35400, #b03a2e); -webkit-background-clip: text; background-clip: text; color: transparent;">We don't just train students.<br>We transform them into <span style="color:#e67e22;">industry-ready</span> professionals.</h1>
+        <p style="font-size: 1.1rem; max-width: 700px; margin-bottom: 2rem; color: #2c3e2f;">Affordable, high-quality technical and verbal training with a dedicated personal counselor inside your college. 24/7 support, placement assistance, and project guarantee.</p>
         <a href="partner.html" class="btn-primary"><i class="fas fa-handshake"></i> Partner With Us →</a>
         <a href="#why-trust" class="btn-outline">Why trust us</a>
     </div>
@@ -372,22 +440,22 @@
                 <div>
                     <span class="badge">Who we are</span>
                     <h2>We are Arakathir</h2>
-                    <p>Founded by <strong>Jegadeesh K</strong>, an IT industry professional. We partner with colleges across Tamil Nadu to deliver <strong>technical + verbal training</strong> at a very minimum budget.</p>
+                    <p>Founded by <strong style="color:#e67e22;">Jegadeesh K</strong>, an IT industry professional. We partner with colleges across Tamil Nadu to deliver <strong>technical + verbal training</strong> at a very minimum budget.</p>
                     <p style="margin-top: 1rem;">Our trainers have real IT industry experience. Plus, we assign a <strong>separate personal counselor</strong> inside your college – available all working hours to clear doubts and guide careers.</p>
                 </div>
                 <div>
                     <span class="badge">For colleges & students</span>
                     <h2>What you gain</h2>
-                    <div style="background:#F4F9F6; border-radius: 24px; padding: 1.2rem;">
-                        <p><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Colleges:</strong> Better placement records, low budget, detailed student-wise reports</p>
-                        <p style="margin-top: 0.8rem;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> <strong>Students:</strong> Job-ready skills, personal counselor, 24/7 support, project guarantee</p>
+                    <div style="background: linear-gradient(115deg, #fff5e6, #ffffff); border-radius: 28px; padding: 1.2rem; border: 1px solid #ffe0b5;">
+                        <p><i class="fas fa-check-circle" style="color:#e67e22;"></i> <strong>Colleges:</strong> Better placement records, low budget, detailed student-wise reports</p>
+                        <p style="margin-top: 0.8rem;"><i class="fas fa-check-circle" style="color:#e67e22;"></i> <strong>Students:</strong> Job-ready skills, personal counselor, 24/7 support, project guarantee</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="section" style="background: #F9FCFE;">
+    <div class="section" style="background: linear-gradient(95deg, #fff9ef, #ffffff);">
         <div class="container">
             <div style="text-align: center;">
                 <span class="badge">Simple process</span>
@@ -405,9 +473,9 @@
 
     <div class="container">
         <div class="uniqueness-box">
-            <i class="fas fa-user-plus" style="font-size: 2rem; color:#1a6d5e;"></i>
-            <h2 style="margin-top: 0.5rem;">✨ Our Uniqueness: Personal Counselor</h2>
-            <p><strong>Not just a trainer.</strong> We appoint a dedicated person available during <strong>college working hours</strong> just to clear doubts, talk about industry future, and give one-on-one career guidance.</p>
+            <i class="fas fa-user-plus" style="font-size: 2rem; color:#f39c12;"></i>
+            <h2 style="margin-top: 0.5rem; background: none; color:#b64926;">✨ Our Uniqueness: Personal Counselor</h2>
+            <p style="font-weight: 500;"><strong>Not just a trainer.</strong> We appoint a dedicated person available during <strong>college working hours</strong> just to clear doubts, talk about industry future, and give one-on-one career guidance.</p>
             <p style="margin-top: 0.8rem;">✅ 24/7 doubt support for any field – no student left behind.</p>
         </div>
     </div>
@@ -431,18 +499,18 @@
 
     <div class="container">
         <div class="founder-note">
-            <i class="fas fa-quote-left" style="font-size: 2rem; color: #b9944e; opacity: 0.5;"></i>
+            <i class="fas fa-quote-left" style="font-size: 2rem; color: #f39c12; opacity: 0.7;"></i>
             <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">"I personally ensure every student gets attention. If a student has a doubt, my counselor is physically in their college. That's my promise. Our budget is the lowest – because quality should not be expensive."</p>
-            <p style="margin-top: 1rem; font-weight: 700;">— Jegadeesh K, Founder & CEO, Arakathir</p>
+            <p style="margin-top: 1rem; font-weight: 800; color:#d35400;">— Jegadeesh K, Founder & CEO, Arakathir</p>
         </div>
     </div>
 
-    <div class="section">
+    <div class="section" style="background: radial-gradient(circle at 10% 30%, #fff3e6, #ffffff);">
         <div class="container" style="text-align: center;">
             <h2>Ready to transform your college placements?</h2>
-            <p style="margin-bottom: 1.5rem;">Get our budget & proposal – minimal cost, maximum impact.</p>
+            <p style="margin-bottom: 1.5rem; color:#2c3e2f;">Get our budget & proposal – minimal cost, maximum impact.</p>
             <a href="partner.html" class="btn-primary"><i class="fas fa-envelope"></i> Partner with us</a>
-            <p style="margin-top: 1.5rem;"><i class="fas fa-envelope"></i> arakathir.team@gmail.com | <i class="fas fa-user-tie"></i> CEO: <strong>8531046561</strong></p>
+            <p style="margin-top: 1.8rem;"><i class="fas fa-envelope" style="color:#e67e22;"></i> arakathir.team@gmail.com | <i class="fas fa-user-tie"></i> CEO: <strong>8531046561</strong></p>
         </div>
     </div>
 
@@ -480,4 +548,5 @@
     }
 </script>
 </body>
+
 </html>

@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.arakathir.in/sitemap.xml
+Sitemap: https://www.arakathir.com/sitemap.xml
 
 # Disallow nothing - all pages are important
 Disallow:
