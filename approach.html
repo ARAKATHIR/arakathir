@@ -5,30 +5,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Arakathir Approach – Personal Counselor Model for College Training</title>
+    <title>Arakathir Approach – IT Solutions & Personal Counselor Training Model</title>
 
-    <!-- ✅ SEO Meta Tags (Updated domain to arakathir.com) -->
-    <meta name="description" content="Arakathir's unique training approach includes a separate personal counselor available during college hours, 24/7 doubt support, student-wise analysis, and project guarantee. See how we transform students.">
-    <meta name="keywords" content="Arakathir approach, personal counselor, college training process, 24/7 doubt support, student analysis, project guarantee, placement support, Tamil Nadu">
+    <!-- ✅ SEO Meta Tags (Updated to reflect IT services + training) -->
+    <meta name="description" content="Arakathir's unique approach: IT company delivering websites & software for businesses, plus college training with personal counselor, 24/7 support, project guarantee. See our dual methodology.">
+    <meta name="keywords" content="Arakathir approach, IT services, website development, software products, personal counselor, college training, 24/7 support, student analysis, project guarantee">
     <meta name="author" content="Jegadeesh K, Founder & CEO, Arakathir">
 
-    <!-- ✅ Open Graph for Social Sharing (Updated URL) -->
-    <meta property="og:title" content="Arakathir Approach – Personal Counselor Model for College Training" />
-    <meta property="og:description" content="Our unique training approach includes a separate personal counselor available during college hours, 24/7 support, student-wise analysis, and project guarantee." />
+    <!-- ✅ Open Graph for Social Sharing -->
+    <meta property="og:title" content="Arakathir Approach – IT Solutions & Personal Counselor Training Model" />
+    <meta property="og:description" content="We build websites & software for businesses, plus offer training with personal counselor for colleges. One partner for complete tech growth." />
     <meta property="og:image" content="arakathir-logo.png" />
     <meta property="og:url" content="https://www.arakathir.com/approach.html" />
     <meta property="og:type" content="website" />
 
     <!-- ✅ Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Arakathir Approach – Personal Counselor Model" />
-    <meta name="twitter:description" content="Our unique training approach includes a separate personal counselor available during college hours." />
+    <meta name="twitter:title" content="Arakathir Approach – IT Solutions & Training" />
+    <meta name="twitter:description" content="Websites, software for business + college training with personal counselor. See our unique dual approach." />
     <meta name="twitter:image" content="arakathir-logo.png" />
 
     <!-- ✅ Favicon -->
     <link rel="icon" type="image/png" href="arakathir-logo.png" />
 
-    <!-- ✅ Canonical URL (Updated to new domain) -->
+    <!-- ✅ Canonical URL -->
     <link rel="canonical" href="https://www.arakathir.com/approach.html" />
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -259,6 +259,47 @@
             color: #c4451a;
         }
 
+        /* ===== DUAL APPROACH SECTION (NEW) ===== */
+        .dual-card {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .approach-card {
+            flex: 1;
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 1.8rem;
+            border: 2px solid #ffdeae;
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+        }
+        
+        .approach-card:hover {
+            transform: translateY(-6px);
+            border-color: #e67e22;
+            box-shadow: 0 20px 30px -12px rgba(230,126,34,0.15);
+        }
+        
+        .approach-card.it-card {
+            border-top: 6px solid #e67e22;
+        }
+        
+        .approach-card.training-card {
+            border-top: 6px solid #1a6d5e;
+        }
+        
+        .approach-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .approach-card h3 {
+            margin-bottom: 1rem;
+        }
+
         /* ===== PROCESS STEPS ===== */
         .process-step {
             display: flex;
@@ -293,6 +334,34 @@
             font-weight: 800;
             flex-shrink: 0;
             box-shadow: 0 6px 12px rgba(230, 126, 34, 0.3);
+        }
+
+        /* ===== IT SERVICES PROCESS (NEW) ===== */
+        .it-process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .it-process-item {
+            background: linear-gradient(115deg, #fffef7, #ffffff);
+            padding: 1.5rem;
+            border-radius: 28px;
+            text-align: center;
+            border: 1px solid #ffe0b5;
+            transition: all 0.2s;
+        }
+        
+        .it-process-item:hover {
+            transform: translateY(-4px);
+            border-color: #e67e22;
+        }
+        
+        .it-process-item i {
+            font-size: 2rem;
+            color: #e67e22;
+            margin-bottom: 0.8rem;
         }
 
         /* ===== UNIQUENESS HIGHLIGHT ===== */
@@ -405,6 +474,24 @@
             transform: scale(1.02);
             box-shadow: 0 10px 20px rgba(243,156,18,0.4);
         }
+        
+        .btn-outline-light {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 60px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: 0.2s;
+        }
+        
+        .btn-outline-light:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: #ffdeae;
+        }
 
         /* ===== FOOTER ===== */
         footer {
@@ -455,6 +542,14 @@
             .feature-grid {
                 gap: 1rem;
             }
+            
+            .dual-card {
+                flex-direction: column;
+            }
+        }
+        
+        .section-title-center {
+            text-align: center;
         }
     </style>
 </head>
@@ -464,10 +559,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="arakathir-logo.png" alt="Arakathir Logo - Training Approach">
+                <img src="arakathir-logo.png" alt="Arakathir Logo - IT Solutions & Training Approach">
                 <div class="logo-text">
                     <h1>Arakathir</h1>
-                    <p>Quality Training. Minimum Cost. Maximum Care.</p>
+                    <p>IT Solutions | Quality Training. Minimum Cost.</p>
                 </div>
             </div>
             <button class="menu-toggle" id="mobile-menu">
@@ -485,15 +580,89 @@
     <div class="main-content">
         <!-- Hero Section -->
         <div class="container">
-            <span class="badge"><i class="fas fa-compass"></i> How we work</span>
-            <h1 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #154e3a, #d35400, #b03a2e); -webkit-background-clip: text; background-clip: text; color: transparent;">A clear, student-first<br>approach to success.</h1>
-            <p style="font-size: 1.1rem; color: #4a3b22; max-width: 700px;">Our unique training methodology combines technical skills, verbal training, and a dedicated personal counselor available during college hours.</p>
+            <span class="badge"><i class="fas fa-compass"></i> Our Dual Approach</span>
+            <h1 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #154e3a, #d35400, #b03a2e); -webkit-background-clip: text; background-clip: text; color: transparent;">Two powerful ways we help<br>business & students succeed.</h1>
+            <p style="font-size: 1.1rem; color: #4a3b22; max-width: 750px;">Arakathir is both an IT company delivering digital products for businesses AND a training partner for colleges with a unique personal counselor model. Explore how we work in both domains.</p>
         </div>
 
-        <!-- 6-Step Process Section -->
+        <!-- NEW: DUAL APPROACH SHOWCASE (IT Services + Training) -->
+        <div class="section section-light">
+            <div class="container">
+                <div class="dual-card">
+                    <div class="approach-card it-card">
+                        <div class="approach-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>💼 For Businesses: IT Solutions Approach</h3>
+                        <p>We build websites, web applications, custom software, and SaaS products with a client-first methodology. Our IT delivery process ensures transparency, speed, and quality.</p>
+                        <ul style="margin-top: 1rem; list-style: none; padding-left: 0;">
+                            <li style="margin: 0.5rem 0;"><i class="fas fa-check-circle" style="color:#e67e22;"></i> Requirement Analysis & Discovery</li>
+                            <li style="margin: 0.5rem 0;"><i class="fas fa-check-circle" style="color:#e67e22;"></i> Agile Development & Weekly Updates</li>
+                            <li style="margin: 0.5rem 0;"><i class="fas fa-check-circle" style="color:#e67e22;"></i> Quality Assurance & Deployment</li>
+                            <li style="margin: 0.5rem 0;"><i class="fas fa-check-circle" style="color:#e67e22;"></i> Post-Launch Support & Maintenance</li>
+                        </ul>
+                    </div>
+                    <div class="approach-card training-card">
+                        <div class="approach-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>🎓 For Colleges: Training Approach</h3>
+                        <p>Our unique training methodology combines technical skills, verbal training, and a dedicated personal counselor available during college hours.</p>
+                        <ul style="margin-top: 1rem; list-style: none; padding-left: 0;">
+                            <li style="margin: 0.5rem 0;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> Industry Expert Trainers</li>
+                            <li style="margin: 0.5rem 0;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> Separate Personal Counselor</li>
+                            <li style="margin: 0.5rem 0;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> 24/7 Doubt Support</li>
+                            <li style="margin: 0.5rem 0;"><i class="fas fa-check-circle" style="color:#1a6d5e;"></i> Project & Placement Guarantee</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW: IT SERVICES DETAILED PROCESS -->
+        <div class="container">
+            <div style="background: linear-gradient(125deg, #fff5e8, #ffffff); border-radius: 48px; padding: 2rem; margin: 1rem 0 2rem 0;">
+                <span class="badge"><i class="fas fa-rocket"></i> For Business Owners</span>
+                <h2>🚀 Our IT Service Delivery Process</h2>
+                <p style="margin-bottom: 1.5rem;">From idea to launch — a proven workflow that delivers scalable digital products on time and within budget.</p>
+                <div class="it-process-grid">
+                    <div class="it-process-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>1. Discovery</h3>
+                        <p>Understand your vision, goals, and technical requirements. We create a roadmap and quote.</p>
+                    </div>
+                    <div class="it-process-item">
+                        <i class="fas fa-drafting-compass"></i>
+                        <h3>2. Design & Prototype</h3>
+                        <p>Wireframes, UI/UX design, and approval before development begins.</p>
+                    </div>
+                    <div class="it-process-item">
+                        <i class="fas fa-code"></i>
+                        <h3>3. Agile Development</h3>
+                        <p>Sprint-based coding with weekly demos. Complete transparency and progress tracking.</p>
+                    </div>
+                    <div class="it-process-item">
+                        <i class="fas fa-vial"></i>
+                        <h3>4. Testing & QA</h3>
+                        <p>Rigorous testing, security checks, and performance optimization.</p>
+                    </div>
+                    <div class="it-process-item">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>5. Deployment</h3>
+                        <p>Seamless launch on your preferred hosting or cloud platform.</p>
+                    </div>
+                    <div class="it-process-item">
+                        <i class="fas fa-life-ring"></i>
+                        <h3>6. Support & Growth</h3>
+                        <p>Post-launch support, maintenance, and feature enhancements.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href="partner.html" class="btn-primary"><i class="fas fa-envelope"></i> Discuss Your Project</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ORIGINAL: 6-Step Training Process (preserved exactly) -->
         <div class="section">
             <div class="container">
-                <h2>📋 Our 6-Step Process</h2>
+                <h2>📋 Our 6-Step Training Process (for Colleges)</h2>
                 <div class="process-step">
                     <div class="step-number">1</div>
                     <div>
@@ -539,22 +708,28 @@
             </div>
         </div>
 
-        <!-- Uniqueness Highlight Section -->
+        <!-- Uniqueness Highlight Section (Training Focus) -->
         <div class="container">
             <div class="uniqueness-highlight">
                 <i class="fas fa-user-plus"></i>
-                <h2>What makes us different?</h2>
+                <h2>What makes our training different?</h2>
                 <p style="font-size: 1.2rem; margin-bottom: 1rem;">No other company gives a separate personal counselor inside your college.</p>
                 <p>Trainers focus on teaching technical skills. Our counselor focuses on YOU — clearing doubts, discussing career paths, and giving personal attention. Available all college working hours.</p>
                 <p style="margin-top: 1rem;"><strong>✅ 24/7 support | ✅ Minimum budget | ✅ Project guarantee</strong></p>
+                <a href="partner.html" class="btn-outline-light"><i class="fas fa-handshake"></i> Partner Your College</a>
             </div>
         </div>
 
-        <!-- Features Grid Section -->
+        <!-- Features Grid Section (Both IT + Training) -->
         <div class="section section-light">
             <div class="container">
-                <h2>✨ What you get with Arakathir</h2>
+                <h2>✨ What You Get with Arakathir</h2>
                 <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Custom Websites & Apps</h3>
+                        <p>Modern, responsive websites and web applications tailored to your business needs.</p>
+                    </div>
                     <div class="feature-card">
                         <i class="fas fa-chalkboard-user"></i>
                         <h3>Real IT Trainers</h3>
@@ -563,7 +738,7 @@
                     <div class="feature-card">
                         <i class="fas fa-headset"></i>
                         <h3>24/7 Support</h3>
-                        <p>Students can ask doubts anytime — late night, weekends, holidays. We respond quickly.</p>
+                        <p>For both business clients and students — we're always available to help.</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-chart-line"></i>
@@ -573,23 +748,28 @@
                     <div class="feature-card">
                         <i class="fas fa-laptop-code"></i>
                         <h3>Project Guarantee</h3>
-                        <p>Every student submits a working project on the last day. We give a surety certificate.</p>
+                        <p>Every student submits a working project. For businesses, we deliver fully tested products.</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-coins"></i>
                         <h3>Minimum Budget</h3>
-                        <p>Lower cost than any other company in the market. Quality doesn't have to be expensive.</p>
+                        <p>Lower cost than any other company in the market — both for IT services and training.</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-briefcase"></i>
                         <h3>Placement Support</h3>
                         <p>Resume building, mock interviews, job connections — included, no extra cost.</p>
                     </div>
+                    <div class="feature-card">
+                        <i class="fas fa-database"></i>
+                        <h3>SaaS & Business Software</h3>
+                        <p>Custom CRMs, inventory systems, and scalable software products for enterprises.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Comparison Table Section -->
+        <!-- Comparison Table Section (Training Focus - original preserved) -->
         <div class="section">
             <div class="container">
                 <h2>📊 Arakathir vs Other Training Companies</h2>
@@ -614,17 +794,19 @@
             </div>
         </div>
 
-        <!-- Call to Action -->
+        <!-- Call to Action (Dual) -->
         <div class="container" style="text-align: center; padding-bottom: 2rem;">
             <a href="partner.html" class="btn-primary"><i class="fas fa-handshake"></i> Partner with us →</a>
             <p style="margin-top: 1.5rem;">
-                <i class="fas fa-user-tie"></i> Call CEO: <strong style="color: #e67e22;">8531046561</strong>
+                <i class="fas fa-user-tie"></i> Call CEO: <strong style="color: #e67e22;">8531046561</strong> | 
+                <i class="fas fa-envelope"></i> arakathir.team@gmail.com
             </p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #b45f1b;">Websites | Software Products | College Training | IT Consulting</p>
         </div>
 
         <!-- Footer -->
         <footer>
-            <p>© 2026 Arakathir — Quality Training. Minimum Cost. Maximum Care.</p>
+            <p>© 2026 Arakathir — IT Solutions & Quality Training Partner. Websites | Software | Training</p>
             <p style="margin-top: 0.5rem;">
                 <i class="fas fa-envelope"></i> arakathir.team@gmail.com | 
                 <i class="fas fa-user-tie"></i> CEO: <a href="tel:+918531046561">8531046561</a>
