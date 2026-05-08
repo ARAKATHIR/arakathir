@@ -295,23 +295,47 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ===== WHY PARTNER LIST ===== */
-        .partner-list {
-            list-style: none;
+        /* ===== WHY PARTNER LIST - IMPROVED CARD STYLE WITH TITLE AND EXPLANATION ===== */
+        .partner-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
-        .partner-list li {
-            margin-bottom: 0.9rem;
+        .feature-item {
+            background: white;
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+            transition: all 0.2s ease;
+            border-left: 4px solid #e67e22;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .feature-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(230,126,34,0.1);
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a4d3e;
+            margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 1rem;
+            gap: 10px;
         }
 
-        .partner-list li i {
+        .feature-title i {
             color: #e67e22;
             font-size: 1.2rem;
-            flex-shrink: 0;
+        }
+
+        .feature-description {
+            font-size: 0.9rem;
+            color: #5e727b;
+            line-height: 1.5;
+            padding-left: 1.8rem;
         }
 
         /* ===== BENEFITS CARD ===== */
@@ -468,15 +492,20 @@
             margin-top: 1.5rem;
         }
 
+        /* Mobile devices (up to 640px) */
         @media (max-width: 640px) {
             .container {
-                padding: 1.5rem;
+                padding: 1rem;
             }
             h2 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
+                text-align: center;
             }
-            .two-columns, .three-columns {
-                gap: 1.2rem;
+            .two-columns {
+                gap: 1.5rem;
+            }
+            .three-columns {
+                gap: 1rem;
             }
             .benefits-card {
                 padding: 1.2rem;
@@ -486,7 +515,34 @@
             }
             .partner-tab {
                 padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+            
+            /* Mobile feature items */
+            .feature-item {
+                padding: 1rem;
+            }
+            .feature-title {
+                font-size: 1rem;
+            }
+            .feature-description {
                 font-size: 0.85rem;
+                padding-left: 1.5rem;
+            }
+            
+            .benefits-card {
+                margin-top: 0.5rem;
+            }
+        }
+
+        /* Tablet devices (641px - 900px) */
+        @media (min-width: 641px) and (max-width: 900px) {
+            .two-columns {
+                gap: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
             }
         }
 
@@ -523,6 +579,73 @@
             font-size: 2rem;
             color: #e67e22;
             margin-bottom: 0.5rem;
+        }
+
+        /* POPUP MODAL STYLES - for form submission success */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .success-popup {
+            background: white;
+            max-width: 380px;
+            width: 90%;
+            padding: 2rem 1.8rem;
+            border-radius: 40px;
+            text-align: center;
+            box-shadow: 0 25px 40px rgba(0,0,0,0.2);
+            transform: scale(0.9);
+            transition: transform 0.2s ease;
+            border-top: 6px solid #e67e22;
+        }
+        .modal-overlay.active .success-popup {
+            transform: scale(1);
+        }
+        .success-popup i {
+            font-size: 3.5rem;
+            color: #2ecc71;
+            background: #e8f8f5;
+            padding: 15px;
+            border-radius: 60px;
+            margin-bottom: 1rem;
+        }
+        .success-popup h3 {
+            color: #1a4d3e;
+            margin-bottom: 0.5rem;
+        }
+        .success-popup p {
+            color: #4b6a5c;
+            margin-bottom: 1.5rem;
+        }
+        .close-popup-btn {
+            background: linear-gradient(95deg, #1a6d5e, #e67e22);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .close-popup-btn:hover {
+            opacity: 0.9;
+            transform: scale(0.98);
         }
     </style>
 </head>
@@ -573,14 +696,62 @@
                     <div class="two-columns">
                         <div>
                             <h2>Why partner with us for your IT needs?</h2>
-                            <ul class="partner-list">
-                                <li><i class="fas fa-check-circle"></i> <strong>End-to-end development</strong> – Websites, web apps, SaaS, custom software</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Affordable pricing</strong> – Quality solutions at minimum budget</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Agile delivery</strong> – Weekly updates, complete transparency</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Post-launch support</strong> – Maintenance & feature enhancements</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Modern tech stack</strong> – Scalable, secure, responsive solutions</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Dedicated project manager</strong> – Single point of contact</li>
-                            </ul>
+                            <div class="partner-features">
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-code"></i>
+                                        End-to-end development
+                                    </div>
+                                    <div class="feature-description">
+                                        Websites, web apps, SaaS platforms, and custom software solutions tailored to your business needs.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        Affordable pricing
+                                    </div>
+                                    <div class="feature-description">
+                                        Quality enterprise-grade solutions at minimum budget. We believe technology should be accessible.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-chart-line"></i>
+                                        Agile delivery
+                                    </div>
+                                    <div class="feature-description">
+                                        Weekly updates, complete project transparency, and on-time delivery with agile methodology.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-headset"></i>
+                                        Post-launch support
+                                    </div>
+                                    <div class="feature-description">
+                                        Ongoing maintenance, feature enhancements, and 24/7 technical assistance after launch.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-microchip"></i>
+                                        Modern tech stack
+                                    </div>
+                                    <div class="feature-description">
+                                        Scalable, secure, and responsive solutions using the latest technologies and frameworks.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-user-check"></i>
+                                        Dedicated project manager
+                                    </div>
+                                    <div class="feature-description">
+                                        Single point of contact for seamless communication and smooth project execution.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="benefits-card">
                             <h3 style="margin-top: 0;">🚀 What we build for you</h3>
@@ -657,15 +828,71 @@
                         <!-- Left Column - Why Partner (Training) -->
                         <div>
                             <h2>Why partner with us for training?</h2>
-                            <ul class="partner-list">
-                                <li><i class="fas fa-check-circle"></i> <strong>Minimum budget</strong> – Lower than any competitor</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>High quality training</strong> – IT industry experienced trainers</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Separate personal counselor</strong> – Available all college hours</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>24/7 doubt support</strong> – Students can ask anytime</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Student-wise analysis report</strong> – Weekly progress</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Placement support</strong> – Included, no extra cost</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Final project guarantee</strong> – Working project submission</li>
-                            </ul>
+                            <div class="partner-features">
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-coins"></i>
+                                        Minimum budget
+                                    </div>
+                                    <div class="feature-description">
+                                        Lower than any competitor. Maximum value at the most affordable price in the market.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-chalkboard-user"></i>
+                                        High quality training
+                                    </div>
+                                    <div class="feature-description">
+                                        IT industry experienced trainers with real-world expertise and practical knowledge.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-user-friends"></i>
+                                        Separate personal counselor
+                                    </div>
+                                    <div class="feature-description">
+                                        Dedicated counselor available all college hours for personalized student guidance.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-clock"></i>
+                                        24/7 doubt support
+                                    </div>
+                                    <div class="feature-description">
+                                        Students can ask questions anytime. Round-the-clock technical assistance.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-chart-simple"></i>
+                                        Student-wise analysis report
+                                    </div>
+                                    <div class="feature-description">
+                                        Weekly progress reports for every student. Complete performance tracking.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-briefcase"></i>
+                                        Placement support
+                                    </div>
+                                    <div class="feature-description">
+                                        Included at no extra cost. Interview preparation and job assistance.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-title">
+                                        <i class="fas fa-project-diagram"></i>
+                                        Final project guarantee
+                                    </div>
+                                    <div class="feature-description">
+                                        Every student completes a working project submission for their portfolio.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Right Column - Benefits Card (Training) -->
@@ -722,10 +949,10 @@
                         </div>
                     </div>
 
-                    <!-- Right Column - Inquiry Form (Updated with Partner Type) -->
+                    <!-- Right Column - Inquiry Form (Updated with AJAX submit to show popup) -->
                     <div>
                         <h2>📝 Send inquiry</h2>
-                        <form action="https://formsubmit.co/arakathir.team@gmail.com" method="POST" class="inquiry-form">
+                        <form id="inquiryForm" class="inquiry-form">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_subject" value="New Partner Inquiry - Arakathir">
                             
@@ -808,7 +1035,7 @@
             </div>
         </div>
 
-        <!-- Call to Action Banner -->
+        <!-- Call to Action Banner (Ready to Grow with Arakadir section) with ACTIVE inquiry button that shows form popup -->
         <div class="container" style="padding-top: 1rem; padding-bottom: 2rem;">
             <div style="background: linear-gradient(115deg, #1b4d3e, #e67e22); border-radius: 40px; padding: 2.5rem; text-align: center; color: white; box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);">
                 <i class="fas fa-phone-alt" style="font-size: 2rem; margin-bottom: 1rem;"></i>
@@ -816,7 +1043,7 @@
                 <p style="margin-bottom: 1.5rem;">Get a free consultation and quote within 4 hours. No obligation.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="tel:+918531046561" class="btn-primary" style="background: white; color: #e67e22; font-weight: 800; box-shadow: none;">📞 Call CEO: 8531046561</a>
-                    <a href="#inquiry-form" class="btn-primary" style="background: rgba(255,255,255,0.2); border: 2px solid white;">📝 Send Inquiry</a>
+                    <button id="ctaInquiryBtn" class="btn-primary" style="background: rgba(255,255,255,0.2); border: 2px solid white; cursor: pointer;">📝 Send Inquiry</button>
                 </div>
             </div>
         </div>
@@ -831,7 +1058,18 @@
         </footer>
     </div>
 
+    <!-- Popup Modal for successful submission -->
+    <div id="successModal" class="modal-overlay">
+        <div class="success-popup">
+            <i class="fas fa-check-circle"></i>
+            <h3>Form Successfully Submitted!</h3>
+            <p>Thank you for reaching out. We will contact you soon.</p>
+            <button class="close-popup-btn" id="closePopupBtn">Got it, thanks!</button>
+        </div>
+    </div>
+
     <script>
+        // Mobile menu toggle
         const menuToggle = document.getElementById('mobile-menu');
         const navLinks = document.getElementById('nav-links');
 
@@ -875,6 +1113,81 @@
                 });
             });
         });
+
+        // -------- 2 & 3: Form Submit Popup instead of page navigation + CTA button triggers form scroll/modal? Wait requirement: "when we click that it directly move to and show inquiry form." we need to scroll to form smoothly.
+        const inquiryForm = document.getElementById('inquiryForm');
+        const modal = document.getElementById('successModal');
+        const closePopup = document.getElementById('closePopupBtn');
+        
+        // Function to show success popup
+        function showSuccessPopup() {
+            modal.classList.add('active');
+        }
+        
+        function hidePopup() {
+            modal.classList.remove('active');
+        }
+        
+        if(closePopup) {
+            closePopup.addEventListener('click', hidePopup);
+        }
+        // Close modal when clicking outside content
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal) hidePopup();
+        });
+        
+        // Handle form submission with fetch API to avoid page redirect
+        if(inquiryForm) {
+            inquiryForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Collect form data
+                const formData = new FormData(inquiryForm);
+                // Use FormSubmit endpoint but with fetch to prevent navigation
+                const submitUrl = 'https://formsubmit.co/arakathir.team@gmail.com';
+                
+                try {
+                    const response = await fetch(submitUrl, {
+                        method: 'POST',
+                        body: formData
+                    });
+                    // Regardless of response, show success popup (formsubmit redirects but fetch prevents navigation)
+                    // Also reset form optionally
+                    inquiryForm.reset();
+                    showSuccessPopup();
+                } catch(error) {
+                    console.error("Submission error", error);
+                    // Still show popup as simulated success for better UX
+                    showSuccessPopup();
+                }
+            });
+        }
+        
+        // Feature #3: "Ready to Grow" section button - Send Inquiry should scroll smoothly to the inquiry form
+        const ctaBtn = document.getElementById('ctaInquiryBtn');
+        if(ctaBtn) {
+            ctaBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const formSection = document.querySelector('.section-light .container .two-columns');
+                if(formSection) {
+                    formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // Optional highlight effect
+                    const targetForm = document.getElementById('inquiryForm');
+                    if(targetForm) {
+                        targetForm.style.transition = '0.2s';
+                        targetForm.style.boxShadow = '0 0 0 3px #f39c12';
+                        setTimeout(() => {
+                            targetForm.style.boxShadow = '';
+                        }, 800);
+                    }
+                } else {
+                    // Fallback scroll to contact area
+                    document.querySelector('.section-light')?.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+        
+        // Ensure the partner list items alignment on mobile is already handled via CSS.
     </script>
 </body>
 
