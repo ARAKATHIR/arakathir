@@ -9,8 +9,8 @@
 
     <!-- ✅ SEO Meta Tags (Updated to reflect IT services + training) -->
     <meta name="description" content="Partner with Arakathir for IT solutions (websites, software products) OR affordable college training with personal counselor. 24/7 support, placement assistance, project guarantee. Minimum budget, maximum quality.">
-    <meta name="keywords" content="Partner with Arakathir, IT company partner, website development, software products, college training partner, affordable training for colleges, placement training, Tamil Nadu, Jegadeesh K">
-    <meta name="author" content="Jegadeesh K, Founder & CEO, Arakathir">
+    <meta name="keywords" content="Partner with Arakathir, IT company partner, website development, software products, college training partner, affordable training for colleges, placement training, Tamil Nadu">
+    <meta name="author" content="Arakathir Team">
 
     <!-- ✅ Open Graph for Social Sharing -->
     <meta property="og:title" content="Partner with Arakathir – IT Solutions & College Training with Personal Counselor" />
@@ -477,6 +477,12 @@
         footer a:hover {
             color: #f39c12;
         }
+        
+        .footer-address {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
 
         /* ===== GRID LAYOUTS ===== */
         .two-columns {
@@ -669,6 +675,7 @@
                 <li><a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
                 <li><a href="approach.html"><i class="fas fa-chalkboard-user"></i> Approach</a></li>
                 <li><a href="partner.html" class="active"><i class="fas fa-handshake"></i> Partner with us</a></li>
+                <li><a href="careers.html"><i class="fas fa-briefcase"></i> Careers</a></li>
             </ul>
         </div>
     </nav>
@@ -933,19 +940,19 @@
                         <h2>📞 Contact us directly</h2>
                         <div class="contact-card">
                             <i class="fas fa-user-tie"></i>
-                            <strong>CEO & Founder:</strong> Jegadeesh K<br>
+                            <strong>CEO:</strong> Jegadeesh K<br>
                             <i class="fas fa-phone"></i>
                             <strong>CEO:</strong> <a href="tel:+918531046561">8531046561</a>
                         </div>
                         <div class="contact-card">
                             <i class="fas fa-envelope"></i>
                             <strong>Email:</strong><br>
-                            <a href="mailto:arakathir.team@gmail.com">arakathir.team@gmail.com</a>
+                            <a href="mailto:info@arakathir.com">info@arakathir.com</a>
                         </div>
                         <div style="background: linear-gradient(115deg, #fff3e6, #fff6ea); border-radius: 24px; padding: 1.2rem; margin-top: 1rem; border-left: 6px solid #f39c12;">
                             <i class="fas fa-quote-left" style="color: #e67e22; opacity: 0.6;"></i>
                             <p style="font-style: italic; margin-top: 0.5rem;">"I personally ensure every student gets attention. For businesses, we deliver quality products at the lowest budget. Quality should not be expensive."</p>
-                            <p style="font-weight: bold; margin-top: 0.5rem;">— Jegadeesh K, Founder</p>
+                            <p style="font-weight: bold; margin-top: 0.5rem;">— Jegadeesh K, CEO</p>
                         </div>
                     </div>
 
@@ -1051,10 +1058,13 @@
         <!-- Footer -->
         <footer>
             <p>© 2026 Arakathir — IT Solutions & Quality Training Partner. Websites | Software Products | College Training.</p>
-            <p style="margin-top: 0.5rem;">
-                <i class="fas fa-envelope"></i> arakathir.team@gmail.com | 
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+                <i class="fas fa-envelope"></i> info@arakathir.com | 
                 <i class="fas fa-user-tie"></i> CEO: <a href="tel:+918531046561">8531046561</a>
             </p>
+            <div class="footer-address">
+                <i class="fas fa-map-marker-alt"></i> Kamarajar Arch Signal, Perambalur, Tamil Nadu 621212
+            </div>
         </footer>
     </div>
 
@@ -1143,21 +1153,18 @@
                 
                 // Collect form data
                 const formData = new FormData(inquiryForm);
-                // Use FormSubmit endpoint but with fetch to prevent navigation
-                const submitUrl = 'https://formsubmit.co/arakathir.team@gmail.com';
+                // Use FormSubmit endpoint with updated email
+                const submitUrl = 'https://formsubmit.co/info@arakathir.com';
                 
                 try {
-                    const response = await fetch(submitUrl, {
+                    await fetch(submitUrl, {
                         method: 'POST',
                         body: formData
                     });
-                    // Regardless of response, show success popup (formsubmit redirects but fetch prevents navigation)
-                    // Also reset form optionally
                     inquiryForm.reset();
                     showSuccessPopup();
                 } catch(error) {
                     console.error("Submission error", error);
-                    // Still show popup as simulated success for better UX
                     showSuccessPopup();
                 }
             });
@@ -1171,7 +1178,6 @@
                 const formSection = document.querySelector('.section-light .container .two-columns');
                 if(formSection) {
                     formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    // Optional highlight effect
                     const targetForm = document.getElementById('inquiryForm');
                     if(targetForm) {
                         targetForm.style.transition = '0.2s';
@@ -1181,13 +1187,10 @@
                         }, 800);
                     }
                 } else {
-                    // Fallback scroll to contact area
                     document.querySelector('.section-light')?.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         }
-        
-        // Ensure the partner list items alignment on mobile is already handled via CSS.
     </script>
 </body>
 

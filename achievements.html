@@ -12,7 +12,7 @@
         content="See Arakathir's achievements in college training. Student testimonials, training photos, placement success stories, and proof of student improvement. Real results from real students.">
     <meta name="keywords"
         content="Arakathir achievements, student testimonials, placement success, training gallery, college training results, student improvement, Tamil Nadu colleges">
-    <meta name="author" content="Jegadeesh K, Founder & CEO, Arakathir">
+    <meta name="author" content="Arakathir Team">
 
     <!-- ✅ Open Graph for Social Sharing (Updated URL) -->
     <meta property="og:title" content="Arakathir Achievements – Student Success Gallery & Testimonials" />
@@ -377,8 +377,7 @@
             background: #1e1e1e;
         }
 
-        /* ===== REFINED CAPTION STYLES - ONLY THESE 3 VIDEO TEXT LINES REDUCED ===== */
-        /* Lakme's Experience caption - small & elegant */
+        /* ===== REFINED CAPTION STYLES ===== */
         .video-caption-custom {
             padding: 0.6rem 0.8rem;
             text-align: center;
@@ -387,25 +386,21 @@
             color: #b45f1b;
             border-top: 1px solid #ffe6c2;
             font-size: 0.7rem;
-            /* Reduced from 0.85rem to a small, beautiful size */
             letter-spacing: 0.01em;
             line-height: 1.35;
         }
 
-        /* Zaara Success caption and Yaazhini Journey caption also inherit same reduced size */
         .video-caption-custom i {
             margin-right: 4px;
             color: #e67e22;
             font-size: 0.65rem;
         }
 
-        /* Additional polish: make the quotes and text harmonious */
         .video-caption-custom strong {
             font-weight: 600;
             font-size: 0.7rem;
         }
 
-        /* For the longer caption of Zaara, ensure readability but keep small size */
         .video-caption-custom br {
             display: block;
         }
@@ -497,7 +492,7 @@
             }
         }
 
-        /* Video testimonials section (original layout preserved but we are replacing with custom layout above) */
+        /* Video testimonials section */
         .video-testimonials {
             background: linear-gradient(115deg, #fef7e8, #fffef5);
             border-radius: 48px;
@@ -648,6 +643,12 @@
         footer a:hover {
             color: #f39c12;
         }
+        
+        .footer-address {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 640px) {
@@ -707,6 +708,7 @@
                 <li><a href="achievements.html" class="active"><i class="fas fa-trophy"></i> Achievements</a></li>
                 <li><a href="approach.html"><i class="fas fa-chalkboard-user"></i> Approach</a></li>
                 <li><a href="partner.html"><i class="fas fa-handshake"></i> Partner with us</a></li>
+                <li><a href="careers.html"><i class="fas fa-briefcase"></i> Careers</a></li>
             </ul>
         </div>
     </nav>
@@ -794,70 +796,66 @@
         </div>
 
         <div class="container">
-    <div class="video-testimonials">
-        <span class="badge"><i class="fas fa-video"></i> Real Voices, Real Impact</span>
-        <h2 style="margin-bottom: 0.5rem;">🎬 Student Video Feedback</h2>
-        <p style="margin-bottom: 1rem; color:#5a4a2a;">
-            Watch what our students say about Arakathir's training, personal counselor, and placement support.
-        </p>
+            <div class="video-testimonials">
+                <span class="badge"><i class="fas fa-video"></i> Real Voices, Real Impact</span>
+                <h2 style="margin-bottom: 0.5rem;">🎬 Student Video Feedback</h2>
+                <p style="margin-bottom: 1rem; color:#5a4a2a;">
+                    Watch what our students say about Arakathir's training, personal counselor, and placement support.
+                </p>
+                
+                <div class="custom-video-showcase">
+
+                    <!-- 16:9 Video -->
+                    <div class="video-row-primary">
+                        <div class="video-169-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/WoxTvmtiHIo?modestbranding=1&rel=0"
+                                frameborder="0" 
+                                allowfullscreen>
+                            </iframe>
+                            <div class="video-caption-custom">
+                                <i class="fas fa-quote-left quote-icon-small"></i> 
+                                <strong>"Helps to do own projects"</strong> — Yogalakshmi . T, Thiruvalluvar.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 Vertical Videos -->
+                    <div class="video-row-secondary">
+                        <div class="video-916-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/1CJm4S0Jq_w?modestbranding=1&rel=0"
+                                frameborder="0" 
+                                allowfullscreen>
+                            </iframe>
+                            <div class="video-caption-custom">
+                                <i class="fas fa-quote-left quote-icon-small"></i> 
+                                <strong>"Help me practice coding on LeetCode, HackerRank, and CodeChef"</strong><br>
+                                — Zaara Farhana . S, Chennai.
+                            </div>
+                        </div>
+
+                        <div class="video-916-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/eabGe6TNnw8?modestbranding=1&rel=0"
+                                frameborder="0" 
+                                allowfullscreen>
+                            </iframe>
+                            <div class="video-caption-custom">
+                                <i class="fas fa-quote-left quote-icon-small"></i> 
+                                <strong>"Very helpful for placements."</strong><br>
+                                — Yaazhini . R, Chennai.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-note" style="margin-top: 1rem;">
+                    <i class="fas fa-play-circle"></i> First video (16:9) centered above; two vertical (9:16) student testimonials below.
+                </div>
+            </div>
+        </div>
         
-        <div class="custom-video-showcase">
-
-            <!-- 16:9 Video -->
-            <div class="video-row-primary">
-                <div class="video-169-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/WoxTvmtiHIo?modestbranding=1&rel=0"
-                        frameborder="0" 
-                        allowfullscreen>
-                    </iframe>
-
-                    <div class="video-caption-custom">
-                        <i class="fas fa-quote-left quote-icon-small"></i> 
-                        <strong>"Helps to do own projects"</strong> — Yogalakshmi . T, Thiruvalluvar.
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2 Vertical Videos -->
-            <div class="video-row-secondary">
-
-                <div class="video-916-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/1CJm4S0Jq_w?modestbranding=1&rel=0"
-                        frameborder="0" 
-                        allowfullscreen>
-                    </iframe>
-
-                    <div class="video-caption-custom">
-                        <i class="fas fa-quote-left quote-icon-small"></i> 
-                        <strong>"Help me practice coding on LeetCode, HackerRank, and CodeChef"</strong><br>
-                        — Zaara Farhana . S, Chennai.
-                    </div>
-                </div>
-
-                <div class="video-916-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/eabGe6TNnw8?modestbranding=1&rel=0"
-                        frameborder="0" 
-                        allowfullscreen>
-                    </iframe>
-
-                    <div class="video-caption-custom">
-                        <i class="fas fa-quote-left quote-icon-small"></i> 
-                        <strong>"Very helpful for placements."</strong><br>
-                        — Yaazhini . R, Chennai.
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="media-note" style="margin-top: 1rem;">
-            <i class="fas fa-play-circle"></i> First video (16:9) centered above; two vertical (9:16) student testimonials below.
-        </div>
-    </div>
-</div>
         <!-- Written Testimonials Section (preserved + enhanced) -->
         <div class="section">
             <div class="container">
@@ -907,10 +905,13 @@
         <!-- Footer -->
         <footer>
             <p>© 2026 Arakathir — Quality Training. Minimum Cost. Maximum Care.</p>
-            <p style="margin-top: 0.5rem;">
-                <i class="fas fa-envelope"></i> arakathir.team@gmail.com |
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+                <i class="fas fa-envelope"></i> info@arakathir.com | 
                 <i class="fas fa-user-tie"></i> CEO: <a href="tel:+918531046561">8531046561</a>
             </p>
+            <div class="footer-address">
+                <i class="fas fa-map-marker-alt"></i> Kamarajar Arch Signal, Perambalur, Tamil Nadu 621212
+            </div>
         </footer>
     </div>
 
