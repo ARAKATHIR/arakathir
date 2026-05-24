@@ -7,28 +7,28 @@
 
     <title>Partner with Arakathir – IT Solutions & Affordable College Training</title>
 
-    <!-- ✅ SEO Meta Tags (Updated to reflect IT services + training) -->
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Partner with Arakathir for IT solutions (websites, software products) OR affordable college training with personal counselor. 24/7 support, placement assistance, project guarantee. Minimum budget, maximum quality.">
     <meta name="keywords" content="Partner with Arakathir, IT company partner, website development, software products, college training partner, affordable training for colleges, placement training, Tamil Nadu">
     <meta name="author" content="Arakathir Team">
 
-    <!-- ✅ Open Graph for Social Sharing -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Partner with Arakathir – IT Solutions & College Training with Personal Counselor" />
-    <meta property="og:description" content="Partner with us for websites & software products for your business OR affordable college training with personal counselor. One partner for complete tech growth." />
+    <meta property="og:description" content="Partner with us for websites & software products for your business OR affordable college training with personal counselor." />
     <meta property="og:image" content="images/arakathir logo.jpeg" />
     <meta property="og:url" content="https://www.arakathir.com/partner.html" />
     <meta property="og:type" content="website" />
 
-    <!-- ✅ Twitter Card -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Partner with Arakathir – IT Solutions & Training" />
     <meta name="twitter:description" content="Websites, software for business OR college training with personal counselor." />
     <meta name="twitter:image" content="images/arakathir logo.jpeg" />
 
-    <!-- ✅ Favicon -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/arakathir logo.jpeg" />
 
-    <!-- ✅ Canonical URL -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.arakathir.com/partner.html" />
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -49,7 +49,6 @@
             scroll-behavior: smooth;
         }
 
-        /* ===== FIXED NAVIGATION BAR ===== */
         .navbar {
             position: fixed;
             top: 0;
@@ -141,7 +140,6 @@
             border-radius: 4px;
         }
 
-        /* ===== MOBILE MENU BUTTON ===== */
         .menu-toggle {
             display: none;
             background: transparent;
@@ -250,7 +248,6 @@
             color: #c4451a;
         }
 
-        /* Partner Toggle Cards (New) */
         .partner-tabs {
             display: flex;
             gap: 1rem;
@@ -295,7 +292,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ===== WHY PARTNER LIST - IMPROVED CARD STYLE WITH TITLE AND EXPLANATION ===== */
         .partner-features {
             display: flex;
             flex-direction: column;
@@ -338,7 +334,6 @@
             padding-left: 1.8rem;
         }
 
-        /* ===== BENEFITS CARD ===== */
         .benefits-card {
             background: linear-gradient(125deg, #ffffff, #fff3e0);
             border-radius: 32px;
@@ -372,7 +367,6 @@
             margin-right: 10px;
         }
 
-        /* ===== CONTACT CARDS ===== */
         .contact-card {
             background: white;
             border-radius: 24px;
@@ -404,7 +398,6 @@
             text-decoration: underline;
         }
 
-        /* ===== FORM STYLES ===== */
         .inquiry-form {
             background: white;
             padding: 1.8rem;
@@ -434,7 +427,6 @@
             box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.15);
         }
 
-        /* ===== BUTTONS ===== */
         .btn-primary {
             display: inline-block;
             background: linear-gradient(95deg, #1a6d5e, #e67e22);
@@ -455,12 +447,6 @@
             box-shadow: 0 10px 20px rgba(243,156,18,0.4);
         }
 
-        .btn-large {
-            padding: 1rem 2.5rem;
-            font-size: 1rem;
-        }
-
-        /* ===== FOOTER ===== */
         footer {
             background: #1f2f1c;
             color: #fdd49a;
@@ -484,7 +470,6 @@
             opacity: 0.9;
         }
 
-        /* ===== GRID LAYOUTS ===== */
         .two-columns {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -498,7 +483,6 @@
             margin-top: 1.5rem;
         }
 
-        /* Mobile devices (up to 640px) */
         @media (max-width: 640px) {
             .container {
                 padding: 1rem;
@@ -510,21 +494,10 @@
             .two-columns {
                 gap: 1.5rem;
             }
-            .three-columns {
-                gap: 1rem;
-            }
-            .benefits-card {
-                padding: 1.2rem;
-            }
-            .inquiry-form {
-                padding: 1.2rem;
-            }
             .partner-tab {
                 padding: 0.5rem 1rem;
                 font-size: 0.8rem;
             }
-            
-            /* Mobile feature items */
             .feature-item {
                 padding: 1rem;
             }
@@ -534,21 +507,6 @@
             .feature-description {
                 font-size: 0.85rem;
                 padding-left: 1.5rem;
-            }
-            
-            .benefits-card {
-                margin-top: 0.5rem;
-            }
-        }
-
-        /* Tablet devices (641px - 900px) */
-        @media (min-width: 641px) and (max-width: 900px) {
-            .two-columns {
-                gap: 1.8rem;
-            }
-            
-            h2 {
-                font-size: 1.7rem;
             }
         }
 
@@ -587,71 +545,34 @@
             margin-bottom: 0.5rem;
         }
 
-        /* POPUP MODAL STYLES - for form submission success */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-            backdrop-filter: blur(4px);
-            z-index: 2000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.2s ease;
-        }
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .success-popup {
-            background: white;
-            max-width: 380px;
-            width: 90%;
-            padding: 2rem 1.8rem;
-            border-radius: 40px;
-            text-align: center;
-            box-shadow: 0 25px 40px rgba(0,0,0,0.2);
-            transform: scale(0.9);
-            transition: transform 0.2s ease;
-            border-top: 6px solid #e67e22;
-        }
-        .modal-overlay.active .success-popup {
-            transform: scale(1);
-        }
-        .success-popup i {
-            font-size: 3.5rem;
-            color: #2ecc71;
-            background: #e8f8f5;
-            padding: 15px;
-            border-radius: 60px;
-            margin-bottom: 1rem;
-        }
-        .success-popup h3 {
-            color: #1a4d3e;
-            margin-bottom: 0.5rem;
-        }
-        .success-popup p {
-            color: #4b6a5c;
-            margin-bottom: 1.5rem;
-        }
-        .close-popup-btn {
+        .success-message {
             background: linear-gradient(95deg, #1a6d5e, #e67e22);
             color: white;
-            border: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 40px;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 0.9rem;
+            padding: 1rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 1rem;
+            display: none;
         }
-        .close-popup-btn:hover {
-            opacity: 0.9;
-            transform: scale(0.98);
+        
+        .success-message.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .error-message {
+            background: #dc3545;
+            color: white;
+            padding: 1rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
         }
     </style>
 </head>
@@ -661,7 +582,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="images/arakathir logo.jpeg" alt="Arakathir Logo - Partner with Us">
+                <img src="images/arakathir logo.jpeg" alt="Arakathir Logo">
                 <div class="logo-text">
                     <h1>Arakathir</h1>
                     <p>IT Solutions | Quality Training. Minimum Cost.</p>
@@ -681,14 +602,12 @@
     </nav>
 
     <div class="main-content">
-        <!-- Hero Section -->
         <div class="container" style="text-align: center;">
             <span class="badge"><i class="fas fa-handshake"></i> For Businesses & Colleges</span>
             <h1 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #154e3a, #d35400, #b03a2e); -webkit-background-clip: text; background-clip: text; color: transparent;">Partner with <span style="color:#e67e22;">Arakathir</span></h1>
             <p style="font-size: 1.1rem; max-width: 750px; margin: 0 auto; color: #2c3e2f;">Websites & software for your business <strong>OR</strong> affordable training with personal counselor for colleges — we're your single partner for tech growth.</p>
         </div>
 
-        <!-- NEW: Partner Type Toggle (IT Services + Training) -->
         <div class="container" style="padding-bottom: 0;">
             <div class="partner-tabs">
                 <div class="partner-tab active" data-panel="it-panel">💼 For Businesses (IT Services)</div>
@@ -696,7 +615,6 @@
             </div>
         </div>
 
-        <!-- Panel 1: IT Services for Businesses (NEW) -->
         <div id="it-panel" class="partner-panel active-panel">
             <div class="section">
                 <div class="container">
@@ -704,238 +622,66 @@
                         <div>
                             <h2>Why partner with us for your IT needs?</h2>
                             <div class="partner-features">
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-code"></i>
-                                        End-to-end development
-                                    </div>
-                                    <div class="feature-description">
-                                        Websites, web apps, SaaS platforms, and custom software solutions tailored to your business needs.
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-dollar-sign"></i>
-                                        Affordable pricing
-                                    </div>
-                                    <div class="feature-description">
-                                        Quality enterprise-grade solutions at minimum budget. We believe technology should be accessible.
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-chart-line"></i>
-                                        Agile delivery
-                                    </div>
-                                    <div class="feature-description">
-                                        Weekly updates, complete project transparency, and on-time delivery with agile methodology.
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-headset"></i>
-                                        Post-launch support
-                                    </div>
-                                    <div class="feature-description">
-                                        Ongoing maintenance, feature enhancements, and 24/7 technical assistance after launch.
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-microchip"></i>
-                                        Modern tech stack
-                                    </div>
-                                    <div class="feature-description">
-                                        Scalable, secure, and responsive solutions using the latest technologies and frameworks.
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-user-check"></i>
-                                        Dedicated project manager
-                                    </div>
-                                    <div class="feature-description">
-                                        Single point of contact for seamless communication and smooth project execution.
-                                    </div>
-                                </div>
+                                <div class="feature-item"><div class="feature-title"><i class="fas fa-code"></i> End-to-end development</div><div class="feature-description">Websites, web apps, SaaS platforms, and custom software solutions tailored to your business needs.</div></div>
+                                <div class="feature-item"><div class="feature-title"><i class="fas fa-dollar-sign"></i> Affordable pricing</div><div class="feature-description">Quality enterprise-grade solutions at minimum budget. We believe technology should be accessible.</div></div>
+                                <div class="feature-item"><div class="feature-title"><i class="fas fa-chart-line"></i> Agile delivery</div><div class="feature-description">Weekly updates, complete project transparency, and on-time delivery with agile methodology.</div></div>
+                                <div class="feature-item"><div class="feature-title"><i class="fas fa-headset"></i> Post-launch support</div><div class="feature-description">Ongoing maintenance, feature enhancements, and 24/7 technical assistance after launch.</div></div>
                             </div>
                         </div>
                         <div class="benefits-card">
                             <h3 style="margin-top: 0;">🚀 What we build for you</h3>
-                            <div class="benefit-item">
-                                <span class="benefit-number">1</span>
-                                <strong>Custom Websites & E-commerce</strong>
-                                <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Responsive, SEO-friendly, conversion-focused</p>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-number">2</span>
-                                <strong>Business Software & CRM</strong>
-                                <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Inventory systems, ERP, automation tools</p>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-number">3</span>
-                                <strong>SaaS Products & Mobile Apps</strong>
-                                <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Subscription-based platforms, cross-platform apps</p>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-number">4</span>
-                                <strong>Digital Transformation</strong>
-                                <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Legacy modernization & cloud integration</p>
-                            </div>
+                            <div class="benefit-item"><span class="benefit-number">1</span> <strong>Custom Websites & E-commerce</strong><p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Responsive, SEO-friendly, conversion-focused</p></div>
+                            <div class="benefit-item"><span class="benefit-number">2</span> <strong>Business Software & CRM</strong><p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Inventory systems, ERP, automation tools</p></div>
+                            <div class="benefit-item"><span class="benefit-number">3</span> <strong>SaaS Products & Mobile Apps</strong><p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Subscription-based platforms, cross-platform apps</p></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- IT Services Showcase -->
             <div class="section-light">
                 <div class="container">
                     <h2 style="text-align: center;">💻 Our IT Service Offerings</h2>
                     <div class="three-columns">
-                        <div class="it-service-card">
-                            <i class="fas fa-globe"></i>
-                            <h3>Web Development</h3>
-                            <p>Corporate websites, e-commerce, booking systems, dashboards</p>
-                        </div>
-                        <div class="it-service-card">
-                            <i class="fas fa-chart-line"></i>
-                            <h3>Business Software</h3>
-                            <p>CRMs, Inventory, ERP, custom automation tools</p>
-                        </div>
-                        <div class="it-service-card">
-                            <i class="fas fa-mobile-alt"></i>
-                            <h3>Mobile & SaaS</h3>
-                            <p>Cross-platform apps, subscription-based platforms</p>
-                        </div>
-                        <div class="it-service-card">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                            <h3>Cloud Solutions</h3>
-                            <p>AWS, Azure deployment, cloud migration</p>
-                        </div>
-                        <div class="it-service-card">
-                            <i class="fas fa-shield-alt"></i>
-                            <h3>Security & QA</h3>
-                            <p>Penetration testing, performance optimization</p>
-                        </div>
-                        <div class="it-service-card">
-                            <i class="fas fa-headset"></i>
-                            <h3>24/7 Support</h3>
-                            <p>Post-launch maintenance & technical assistance</p>
-                        </div>
+                        <div class="it-service-card"><i class="fas fa-globe"></i><h3>Web Development</h3><p>Corporate websites, e-commerce, booking systems</p></div>
+                        <div class="it-service-card"><i class="fas fa-chart-line"></i><h3>Business Software</h3><p>CRMs, Inventory, ERP, custom automation tools</p></div>
+                        <div class="it-service-card"><i class="fas fa-mobile-alt"></i><h3>Mobile & SaaS</h3><p>Cross-platform apps, subscription-based platforms</p></div>
+                        <div class="it-service-card"><i class="fas fa-cloud-upload-alt"></i><h3>Cloud Solutions</h3><p>AWS, Azure deployment, cloud migration</p></div>
+                        <div class="it-service-card"><i class="fas fa-shield-alt"></i><h3>Security & QA</h3><p>Penetration testing, performance optimization</p></div>
+                        <div class="it-service-card"><i class="fas fa-headset"></i><h3>24/7 Support</h3><p>Post-launch maintenance & technical assistance</p></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Panel 2: College Training (ORIGINAL CONTENT - PRESERVED) -->
         <div id="training-panel" class="partner-panel">
             <div class="section">
                 <div class="container">
                     <div class="two-columns">
-                        <!-- Left Column - Why Partner (Training) -->
                         <div>
                             <h2>Why partner with us for training?</h2>
                             <div class="partner-features">
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-coins"></i>
-                                        Minimum budget
-                                    </div>
-                                    <div class="feature-description">
-                                        Lower than any competitor. Maximum value at the most affordable price in the market.
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-chalkboard-user"></i>
-                                        High quality training
-                                    </div>
-                                    <div class="feature-description">
-                                        IT industry experienced trainers with real-world expertise and practical knowledge.
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-user-friends"></i>
-                                        Separate personal counselor
-                                    </div>
-                                    <div class="feature-description">
-                                        Dedicated counselor available all college hours for personalized student guidance.
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-clock"></i>
-                                        24/7 doubt support
-                                    </div>
-                                    <div class="feature-description">
-                                        Students can ask questions anytime. Round-the-clock technical assistance.
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-chart-simple"></i>
-                                        Student-wise analysis report
-                                    </div>
-                                    <div class="feature-description">
-                                        Weekly progress reports for every student. Complete performance tracking.
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-briefcase"></i>
-                                        Placement support
-                                    </div>
-                                    <div class="feature-description">
-                                        Included at no extra cost. Interview preparation and job assistance.
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-title">
-                                        <i class="fas fa-project-diagram"></i>
-                                        Final project guarantee
-                                    </div>
-                                    <div class="feature-description">
-                                        Every student completes a working project submission for their portfolio.
-                                    </div>
-                                </div>
+                                <div class="feature-item"><div class="feature-title"><i class="fas fa-coins"></i> Minimum budget</div><div class="feature-description">Lower than any competitor. Maximum value at the most affordable price.</div></div>
+                                <div class="feature-item"><div class="feature-title"><i class="fas fa-chalkboard-user"></i> High quality training</div><div class="feature-description">IT industry experienced trainers with real-world expertise.</div></div>
+                                <div class="feature-item"><div class="feature-title"><i class="fas fa-user-friends"></i> Separate personal counselor</div><div class="feature-description">Dedicated counselor available all college hours for personalized guidance.</div></div>
+                                <div class="feature-item"><div class="feature-title"><i class="fas fa-clock"></i> 24/7 doubt support</div><div class="feature-description">Students can ask questions anytime. Round-the-clock technical assistance.</div></div>
+                                <div class="feature-item"><div class="feature-title"><i class="fas fa-chart-simple"></i> Student-wise analysis report</div><div class="feature-description">Weekly progress reports for every student. Complete performance tracking.</div></div>
+                                <div class="feature-item"><div class="feature-title"><i class="fas fa-briefcase"></i> Placement support</div><div class="feature-description">Included at no extra cost. Interview preparation and job assistance.</div></div>
                             </div>
                         </div>
-
-                        <!-- Right Column - Benefits Card (Training) -->
                         <div class="benefits-card">
                             <h3 style="margin-top: 0;">🎯 What your college gets</h3>
-                            <div class="benefit-item">
-                                <span class="benefit-number">1</span>
-                                <strong>Better placement records</strong>
-                                <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Students become job-ready, increasing your placement percentage</p>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-number">2</span>
-                                <strong>Save management budget</strong>
-                                <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Lowest cost in market – more savings, same or better results</p>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-number">3</span>
-                                <strong>Complete transparency</strong>
-                                <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">Weekly student-wise reports keep you informed about every student</p>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-number">4</span>
-                                <strong>Zero management headache</strong>
-                                <p style="font-size: 0.85rem; color: #5e727b; margin-top: 5px;">We handle everything – training, counseling, support, reporting</p>
-                            </div>
+                            <div class="benefit-item"><span class="benefit-number">1</span> <strong>Better placement records</strong><p style="font-size: 0.85rem; color: #5e727b;">Students become job-ready, increasing placement percentage</p></div>
+                            <div class="benefit-item"><span class="benefit-number">2</span> <strong>Save management budget</strong><p style="font-size: 0.85rem; color: #5e727b;">Lowest cost in market – more savings, better results</p></div>
+                            <div class="benefit-item"><span class="benefit-number">3</span> <strong>Complete transparency</strong><p style="font-size: 0.85rem; color: #5e727b;">Weekly student-wise reports keep you informed</p></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Contact & Form Section (Shared for both) -->
         <div class="section section-light">
             <div class="container">
                 <div class="two-columns">
-                    <!-- Left Column - Direct Contact -->
                     <div>
                         <h2>📞 Contact us directly</h2>
                         <div class="contact-card">
@@ -951,33 +697,33 @@
                         </div>
                         <div style="background: linear-gradient(115deg, #fff3e6, #fff6ea); border-radius: 24px; padding: 1.2rem; margin-top: 1rem; border-left: 6px solid #f39c12;">
                             <i class="fas fa-quote-left" style="color: #e67e22; opacity: 0.6;"></i>
-                            <p style="font-style: italic; margin-top: 0.5rem;">"I personally ensure every student gets attention. For businesses, we deliver quality products at the lowest budget. Quality should not be expensive."</p>
+                            <p style="font-style: italic; margin-top: 0.5rem;">"I personally ensure every student gets attention. For businesses, we deliver quality products at the lowest budget."</p>
                             <p style="font-weight: bold; margin-top: 0.5rem;">— Jegadeesh K, CEO</p>
                         </div>
                     </div>
 
-                    <!-- Right Column - Inquiry Form (Updated with AJAX submit to show popup) -->
                     <div>
                         <h2>📝 Send inquiry</h2>
-                        <form id="inquiryForm" class="inquiry-form">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_subject" value="New Partner Inquiry - Arakathir">
+                        <!-- USING FORMSPREE WITH CORRECT FORMAT - NO REGISTRATION NEEDED -->
+                        <form class="inquiry-form" 
+                              action="https://formspree.io/f/xykvpqaz" 
+                              method="POST">
                             
                             <div class="form-group">
-                                <select name="partner_type" required>
+                                <select name="Partner Type" required>
                                     <option value="">🤝 I want to partner for... *</option>
                                     <option value="IT Services - Business">💼 IT Services (Website/Software for my Business)</option>
                                     <option value="College Training">🎓 College Training (for my Institution)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="organization_name" placeholder="🏛️ Organization/College Name *" required>
+                                <input type="text" name="Organization Name" placeholder="🏛️ Organization/College Name *" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="name" placeholder="👤 Your Name *" required>
+                                <input type="text" name="Your Name" placeholder="👤 Your Name *" required>
                             </div>
                             <div class="form-group">
-                                <select name="role" required>
+                                <select name="Role" required>
                                     <option value="">📌 Your Role *</option>
                                     <option value="Business Owner">Business Owner</option>
                                     <option value="Entrepreneur">Entrepreneur</option>
@@ -989,73 +735,55 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" placeholder="✉️ Email *" required>
+                                <input type="email" name="Email" placeholder="✉️ Email Address *" required>
                             </div>
                             <div class="form-group">
-                                <input type="tel" name="phone" placeholder="📞 Phone Number *" required>
+                                <input type="tel" name="Phone" placeholder="📞 Phone Number *" required>
                             </div>
                             <div class="form-group">
-                                <textarea name="message" rows="3" placeholder="💬 Tell us about your requirements (project details, batch size, budget expectations, etc.)"></textarea>
+                                <textarea name="Message" rows="3" placeholder="💬 Tell us about your requirements (project details, batch size, budget expectations, etc.)"></textarea>
                             </div>
                             <button type="submit" class="btn-primary" style="width: 100%;">Send Inquiry →</button>
                             <p style="font-size: 0.7rem; text-align: center; margin-top: 0.8rem; color: #b45f1b;">We reply within 4 working hours</p>
                         </form>
+                        
+                        <div id="successMsg" class="success-message">
+                            ✅ <strong>Form Successfully Submitted!</strong><br>
+                            Thank you for reaching out. We will contact you soon.
+                        </div>
+                        <div id="errorMsg" class="error-message">
+                            ❌ <strong>Submission Failed!</strong><br>
+                            Please try again or call us directly at 8531046561.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- FAQ Section (Updated to include both domains) -->
         <div class="container" style="padding-top: 2rem; padding-bottom: 1rem;">
             <h2 style="text-align: center;">❓ Frequently Asked Questions</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                <div class="faq-card">
-                    <i class="fas fa-laptop-code" style="color: #e67e22; font-size: 1.8rem; margin-bottom: 0.5rem;"></i>
-                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">What IT services do you offer?</h3>
-                    <p style="color: #5e727b; font-size: 0.9rem;">Websites, e-commerce, custom software, CRM, SaaS products, mobile apps, and cloud solutions.</p>
-                </div>
-                <div class="faq-card">
-                    <i class="fas fa-coins" style="color: #e67e22; font-size: 1.8rem; margin-bottom: 0.5rem;"></i>
-                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">What is the budget for IT projects?</h3>
-                    <p style="color: #5e727b; font-size: 0.9rem;">Minimum in the market. Contact us for a free quote based on your requirements.</p>
-                </div>
-                <div class="faq-card">
-                    <i class="fas fa-user-graduate" style="color: #e67e22; font-size: 1.8rem; margin-bottom: 0.5rem;"></i>
-                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Is counselor available daily for training?</h3>
-                    <p style="color: #5e727b; font-size: 0.9rem;">Yes. Physically in your college during working hours.</p>
-                </div>
-                <div class="faq-card">
-                    <i class="fas fa-users" style="color: #e67e22; font-size: 1.8rem; margin-bottom: 0.5rem;"></i>
-                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Minimum batch size for training?</h3>
-                    <p style="color: #5e727b; font-size: 0.9rem;">We work with any batch size – from 20 to 500+ students.</p>
-                </div>
-                <div class="faq-card">
-                    <i class="fas fa-clock" style="color: #e67e22; font-size: 1.8rem; margin-bottom: 0.5rem;"></i>
-                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">How long does IT project take?</h3>
-                    <p style="color: #5e727b; font-size: 0.9rem;">Typically 2-8 weeks depending on complexity. We follow agile methodology.</p>
-                </div>
-                <div class="faq-card">
-                    <i class="fas fa-handshake" style="color: #e67e22; font-size: 1.8rem; margin-bottom: 0.5rem;"></i>
-                    <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">How to start partnership?</h3>
-                    <p style="color: #5e727b; font-size: 0.9rem;">Fill the form or call 8531046561. We'll discuss and proceed.</p>
-                </div>
+                <div class="faq-card"><i class="fas fa-laptop-code"></i><h3>What IT services do you offer?</h3><p>Websites, e-commerce, custom software, CRM, SaaS products, mobile apps.</p></div>
+                <div class="faq-card"><i class="fas fa-coins"></i><h3>What is the budget for IT projects?</h3><p>Minimum in the market. Contact us for a free quote.</p></div>
+                <div class="faq-card"><i class="fas fa-user-graduate"></i><h3>Is counselor available daily for training?</h3><p>Yes. Physically in your college during working hours.</p></div>
+                <div class="faq-card"><i class="fas fa-users"></i><h3>Minimum batch size for training?</h3><p>We work with any batch size – from 20 to 500+ students.</p></div>
+                <div class="faq-card"><i class="fas fa-clock"></i><h3>How long does IT project take?</h3><p>Typically 2-8 weeks depending on complexity.</p></div>
+                <div class="faq-card"><i class="fas fa-handshake"></i><h3>How to start partnership?</h3><p>Fill the form or call 8531046561.</p></div>
             </div>
         </div>
 
-        <!-- Call to Action Banner (Ready to Grow with Arakadir section) with ACTIVE inquiry button that shows form popup -->
         <div class="container" style="padding-top: 1rem; padding-bottom: 2rem;">
-            <div style="background: linear-gradient(115deg, #1b4d3e, #e67e22); border-radius: 40px; padding: 2.5rem; text-align: center; color: white; box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);">
+            <div style="background: linear-gradient(115deg, #1b4d3e, #e67e22); border-radius: 40px; padding: 2.5rem; text-align: center; color: white;">
                 <i class="fas fa-phone-alt" style="font-size: 2rem; margin-bottom: 1rem;"></i>
                 <h2 style="color: white; margin-bottom: 0.5rem;">Ready to grow with Arakathir?</h2>
                 <p style="margin-bottom: 1.5rem;">Get a free consultation and quote within 4 hours. No obligation.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="tel:+918531046561" class="btn-primary" style="background: white; color: #e67e22; font-weight: 800; box-shadow: none;">📞 Call CEO: 8531046561</a>
-                    <button id="ctaInquiryBtn" class="btn-primary" style="background: rgba(255,255,255,0.2); border: 2px solid white; cursor: pointer;">📝 Send Inquiry</button>
+                    <a href="tel:+918531046561" class="btn-primary" style="background: white; color: #e67e22;">📞 Call CEO: 8531046561</a>
+                    <button id="ctaInquiryBtn" class="btn-primary" style="background: rgba(255,255,255,0.2); border: 2px solid white;">📝 Send Inquiry</button>
                 </div>
             </div>
         </div>
 
-        <!-- Footer -->
         <footer>
             <p>© 2026 Arakathir — IT Solutions & Quality Training Partner. Websites | Software Products | College Training.</p>
             <p style="margin-top: 0.5rem; font-size: 0.8rem;">
@@ -1068,129 +796,111 @@
         </footer>
     </div>
 
-    <!-- Popup Modal for successful submission -->
-    <div id="successModal" class="modal-overlay">
-        <div class="success-popup">
-            <i class="fas fa-check-circle"></i>
-            <h3>Form Successfully Submitted!</h3>
-            <p>Thank you for reaching out. We will contact you soon.</p>
-            <button class="close-popup-btn" id="closePopupBtn">Got it, thanks!</button>
-        </div>
-    </div>
-
     <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('mobile-menu');
-        const navLinks = document.getElementById('nav-links');
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinksEl = document.getElementById('nav-links');
 
-        if (menuToggle && navLinks) {
-            menuToggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                navLinks.classList.toggle('active');
-            });
+    if (menuToggle && navLinksEl) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navLinksEl.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinksEl.classList.remove('active'));
+        });
+        document.addEventListener('click', function(event) {
+            if (navLinksEl.classList.contains('active') && !navLinksEl.contains(event.target) && !menuToggle.contains(event.target)) {
+                navLinksEl.classList.remove('active');
+            }
+        });
+    }
 
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                });
-            });
-
-            document.addEventListener('click', function(event) {
-                if (navLinks.classList.contains('active') &&
-                    !navLinks.contains(event.target) &&
-                    !menuToggle.contains(event.target)) {
-                    navLinks.classList.remove('active');
-                }
-            });
-        }
-        
-        // Partner tab switching functionality
-        const tabs = document.querySelectorAll('.partner-tab');
-        const panels = document.querySelectorAll('.partner-panel');
-        
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const targetPanel = tab.getAttribute('data-panel');
-                
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                
-                panels.forEach(panel => {
-                    panel.classList.remove('active-panel');
-                    if (panel.id === targetPanel) {
-                        panel.classList.add('active-panel');
-                    }
-                });
+    // Partner tabs
+    const tabs = document.querySelectorAll('.partner-tab');
+    const panels = document.querySelectorAll('.partner-panel');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetPanel = tab.getAttribute('data-panel');
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            panels.forEach(panel => {
+                panel.classList.remove('active-panel');
+                if (panel.id === targetPanel) panel.classList.add('active-panel');
             });
         });
+    });
 
-        // -------- 2 & 3: Form Submit Popup instead of page navigation + CTA button triggers form scroll/modal? Wait requirement: "when we click that it directly move to and show inquiry form." we need to scroll to form smoothly.
-        const inquiryForm = document.getElementById('inquiryForm');
-        const modal = document.getElementById('successModal');
-        const closePopup = document.getElementById('closePopupBtn');
-        
-        // Function to show success popup
-        function showSuccessPopup() {
-            modal.classList.add('active');
-        }
-        
-        function hidePopup() {
-            modal.classList.remove('active');
-        }
-        
-        if(closePopup) {
-            closePopup.addEventListener('click', hidePopup);
-        }
-        // Close modal when clicking outside content
-        modal.addEventListener('click', (e) => {
-            if(e.target === modal) hidePopup();
-        });
-        
-        // Handle form submission with fetch API to avoid page redirect
-        if(inquiryForm) {
-            inquiryForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                // Collect form data
-                const formData = new FormData(inquiryForm);
-                // Use FormSubmit endpoint with updated email
-                const submitUrl = 'https://formsubmit.co/info@arakathir.com';
-                
-                try {
-                    await fetch(submitUrl, {
-                        method: 'POST',
-                        body: formData
-                    });
-                    inquiryForm.reset();
-                    showSuccessPopup();
-                } catch(error) {
-                    console.error("Submission error", error);
-                    showSuccessPopup();
-                }
-            });
-        }
-        
-        // Feature #3: "Ready to Grow" section button - Send Inquiry should scroll smoothly to the inquiry form
-        const ctaBtn = document.getElementById('ctaInquiryBtn');
-        if(ctaBtn) {
-            ctaBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                const formSection = document.querySelector('.section-light .container .two-columns');
-                if(formSection) {
-                    formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    const targetForm = document.getElementById('inquiryForm');
-                    if(targetForm) {
-                        targetForm.style.transition = '0.2s';
-                        targetForm.style.boxShadow = '0 0 0 3px #f39c12';
-                        setTimeout(() => {
-                            targetForm.style.boxShadow = '';
-                        }, 800);
+    // Form submission with AJAX
+    const form = document.querySelector('.inquiry-form');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg = document.getElementById('errorMsg');
+
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Hide any previous messages
+            successMsg.classList.remove('show');
+            errorMsg.classList.remove('show');
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending... ⏳';
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch('https://formspree.io/f/xykvpqaz', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
                     }
+                });
+                
+                if (response.ok) {
+                    form.reset();
+                    successMsg.classList.add('show');
+                    setTimeout(() => {
+                        successMsg.classList.remove('show');
+                    }, 5000);
                 } else {
-                    document.querySelector('.section-light')?.scrollIntoView({ behavior: 'smooth' });
+                    const data = await response.json();
+                    console.error('Formspree error:', data);
+                    errorMsg.classList.add('show');
+                    setTimeout(() => {
+                        errorMsg.classList.remove('show');
+                    }, 5000);
                 }
-            });
-        }
+            } catch (error) {
+                console.error('Network error:', error);
+                errorMsg.classList.add('show');
+                setTimeout(() => {
+                    errorMsg.classList.remove('show');
+                }, 5000);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
+    }
+
+    // CTA button scroll to form
+    const ctaBtn = document.getElementById('ctaInquiryBtn');
+    if (ctaBtn) {
+        ctaBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetForm = document.querySelector('.inquiry-form');
+            if (targetForm) {
+                targetForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                targetForm.style.transition = '0.3s';
+                targetForm.style.boxShadow = '0 0 0 4px rgba(243, 156, 18, 0.5)';
+                setTimeout(() => { targetForm.style.boxShadow = ''; }, 1500);
+            }
+        });
+    }
     </script>
 </body>
 
