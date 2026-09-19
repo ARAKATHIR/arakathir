@@ -1,2 +1,7 @@
-http://arakathir.com/* https://arakathir.com/:splat 301!
-http://www.arakathir.com/* https://arakathir.com/:splat 301!
+# Domain & Protocol canonical redirects
+http://arakathir.com/* https://arakathir.com/:splat 301
+http://www.arakathir.com/* https://arakathir.com/:splat 301
+https://www.arakathir.com/* https://arakathir.com/:splat 301
+
+# Single Page Application (SPA) / Dynamic Routing fallback
+/* /index.html 200
