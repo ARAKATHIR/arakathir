@@ -1,2 +1,1 @@
-# Rewrite all incoming route requests to index.html (SPA / Dynamic routing)
-/* /index.html 200
+/*    /index.html   200
